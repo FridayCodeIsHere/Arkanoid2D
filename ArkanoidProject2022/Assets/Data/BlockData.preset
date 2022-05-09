@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BlockData
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: e0fe406f46c4751419e56412e50ad420, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _block
+    value: 
+    objectReference: {fileID: 3774772097009397690, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sprites.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sprites.Array.data[0]
+    value: 
+    objectReference: {fileID: 1846548210174212785, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sprites.Array.data[1]
+    value: 
+    objectReference: {fileID: 4701032791770644543, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _dropColor.r
+    value: 0.3931559
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _dropColor.g
+    value: 0.46641305
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _dropColor.b
+    value: 0.5377358
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _dropColor.a
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _score
+    value: 50
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
