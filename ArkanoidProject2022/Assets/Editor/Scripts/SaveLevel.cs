@@ -5,24 +5,20 @@ namespace ArkanoidProj
 {
     public class SaveLevel
     {
-        public List<BlockObject> GetBlocks()
+        public void Save(GameLevel gameLevel)
         {
-            List<BlockObject> objects = new List<BlockObject>();
-            GameObject[] allBlocks = GameObject.FindGameObjectsWithTag("Block");
+            gameLevel.Blocks = new List<BlockObject>();
+            BaseBlock[] baseBlocks = GameObject.FindObjectsOfType<BaseBlock>();
 
-            foreach(GameObject blockItem in allBlocks)
+            foreach(BaseBlock blockItem in baseBlocks)
             {
                 BlockObject blockObject = new BlockObject();
                 blockObject.Position = blockItem.gameObject.transform.position;
-                
-                if (blockItem.TryGetComponent(out Block block))
-                {
-                    blockObject.BlockData = block.BlockData;
-                }
-                objects.Add(blockObject);
-            }
 
-            return objects;
+                blockObject.BlockData = blockItem.BlockData;
+                
+                gameLevel.Blocks.Add(blockObject);
+            }
         }
     }
 }

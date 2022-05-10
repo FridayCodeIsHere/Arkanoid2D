@@ -4,11 +4,11 @@ namespace ArkanoidProj
 {
     public class EditorGrid
     {
-        private const float _leftPosition = -5f;
-        private const float _upPosition = 7.3f;
-        private const int _columnCount = 14;
-        private const int _lineCount = 7;
-        private const float _offset = 0.77f;
+        private const float _leftPosition = -4.87f;
+        private const float _upPosition = 7f;
+        private const int _columnCount = 10;
+        private const int _lineCount = 9;
+        private const float _offset = 1.08f;
 
         public Vector2 CheckPosition(Vector2 position)
         {

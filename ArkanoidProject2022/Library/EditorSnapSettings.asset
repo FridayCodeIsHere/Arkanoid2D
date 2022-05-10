@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SnapEnabled: 0
   m_SnapSettings:
-    m_SnapValue: {x: 0.77, y: 0.77, z: 0.77}
+    m_SnapValue: {x: 1.08, y: 1.08, z: 1.08}
     m_SnapMultiplier: {x: 2048, y: 2048, z: 2048}
     m_Rotation: 15
     m_Scale: 1.05

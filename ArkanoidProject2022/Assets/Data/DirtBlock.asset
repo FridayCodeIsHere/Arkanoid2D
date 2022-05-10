@@ -15,5 +15,5 @@ MonoBehaviour:
   _block: {fileID: 3774772097009397693, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
   _sprites:
   - {fileID: 7895167667073630698, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
-  _dropColor: {r: 0.3962264, g: 0.3207884, b: 0.18503025, a: 1}
+  _dropColor: {r: 0.6320754, g: 0.40274647, b: 0.18783373, a: 1}
   _score: 25

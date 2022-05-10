@@ -6,6 +6,8 @@ namespace ArkanoidProj
     public class PlatformInput : MonoBehaviour
     {
         public static event Action<float> OnMove;
+        public static event Action OnClicked;
+
         private Vector2 _startPosition = Vector2.zero;
         private float _direction = 0f;
 
@@ -13,6 +15,10 @@ namespace ArkanoidProj
         {
 #if UNITY_EDITOR
             OnMove?.Invoke(Input.GetAxisRaw("Horizontal"));
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                OnClicked?.Invoke();
+            }
 #endif
 
 #if UNITY_ANDROID
@@ -25,6 +31,11 @@ namespace ArkanoidProj
             if (Input.touchCount > 0)
             {
                 Touch touch = Input.GetTouch(0);
+
+                if (touch.tapCount > 1)
+                {
+                    OnClicked?.Invoke();
+                }
 
                 switch (touch.phase)
                 {

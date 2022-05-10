@@ -6,7 +6,7 @@ namespace ArkanoidProj
 {
 
     [RequireComponent(typeof(SpriteRenderer), typeof(ParticleSystem))]
-    public class Block : MonoBehaviour
+    public class Block : BaseBlock, IDamageable
     {
         private static int _count = 0;
         
@@ -15,9 +15,9 @@ namespace ArkanoidProj
         [SerializeField] private int _score;
         [SerializeField] private int _life;
 
-#if UNITY_EDITOR
-        public BlockData BlockData;
-#endif
+//#if UNITY_EDITOR
+//        public BlockData BlockData;
+//#endif
 
         private void OnEnable()
         {
@@ -35,15 +35,15 @@ namespace ArkanoidProj
 
         public void SetData(BlockData blockData)
         {
-            _sprites = new List<Sprite>(blockData._sprites);
-            _score = blockData._score;
+            _sprites = new List<Sprite>(blockData.Sprites);
+            _score = blockData.Score;
 
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _life = _sprites.Count;
             _spriteRenderer.sprite = _sprites[_life - 1];
 
             MainModule main = GetComponent<ParticleSystem>().main;
-            main.startColor = blockData._dropColor;
+            main.startColor = blockData.DropColor;
         }
 
         public void ApplyDamage()
@@ -51,7 +51,7 @@ namespace ArkanoidProj
             _life--;
             if (_life < 1)
             {
-                DestroyBlock();
+                Dead();
             }
             else
             {
@@ -59,7 +59,7 @@ namespace ArkanoidProj
             }
         }
 
-        public void DestroyBlock()
+        public void Dead()
         {
             _spriteRenderer.enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;

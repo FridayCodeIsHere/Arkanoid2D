@@ -14,14 +14,11 @@ namespace ArkanoidProj
                 GameObject game;
 
 #if UNITY_EDITOR
-                game = PrefabUtility.InstantiatePrefab(level.Blocks[i].BlockData._block, parent) as GameObject;
-                if (game.TryGetComponent(out Block block))
+                game = PrefabUtility.InstantiatePrefab(level.Blocks[i].BlockData.Block, parent) as GameObject;
+                if (game.TryGetComponent(out BaseBlock baseBlock))
                 {
-                    block.BlockData = level.Blocks[i].BlockData;
-                    block.SetData(level.Blocks[i].BlockData);
+                    baseBlock.BlockData = level.Blocks[i].BlockData;
                 }
-
-
 #else
                 game = GameObject.Instantiate(level.Blocks[i].BlockData._block, parent);
                 if (game.TryGetComponent(out Block block1))
@@ -30,6 +27,10 @@ namespace ArkanoidProj
                     block.SetData(blockData);
                 }
 #endif
+                if (game.TryGetComponent(out Block block))
+                {
+                    block.SetData(level.Blocks[i].BlockData);
+                }
                 game.transform.position = level.Blocks[i].Position;
             }
         }

@@ -12,4 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015560ee29c603c42ac4b950946af2ca, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: 
-  Blocks: []
+  Blocks:
+  - Position: {x: 4.85, y: 3.7600002, z: 0}
+    BlockData: {fileID: 11400000, guid: 3fd95f56f560b6449b1ea68f2e5837b1, type: 2}
+  - Position: {x: 3.77, y: 5.92, z: 0}
+    BlockData: {fileID: 11400000, guid: 3fd95f56f560b6449b1ea68f2e5837b1, type: 2}
+  - Position: {x: -0.55, y: 7, z: 0}
+    BlockData: {fileID: 11400000, guid: 3fd95f56f560b6449b1ea68f2e5837b1, type: 2}
+  - Position: {x: -4.87, y: 5.92, z: 0}
+    BlockData: {fileID: 11400000, guid: 772c1053ca86db64fbd9ad17fa6dfbab, type: 2}
+  - Position: {x: -2.71, y: 7, z: 0}
+    BlockData: {fileID: 11400000, guid: 772c1053ca86db64fbd9ad17fa6dfbab, type: 2}
+  - Position: {x: 0.53000003, y: 5.92, z: 0}
+    BlockData: {fileID: 11400000, guid: 772c1053ca86db64fbd9ad17fa6dfbab, type: 2}
+  - Position: {x: 0.53000003, y: 1.6000004, z: 0}
+    BlockData: {fileID: 11400000, guid: 3fd95f56f560b6449b1ea68f2e5837b1, type: 2}
+  - Position: {x: 1.6100001, y: 1.6000004, z: 0}
+    BlockData: {fileID: 11400000, guid: 3fd95f56f560b6449b1ea68f2e5837b1, type: 2}
+  - Position: {x: -0.55, y: 1.6000004, z: 0}
+    BlockData: {fileID: 11400000, guid: 3fd95f56f560b6449b1ea68f2e5837b1, type: 2}
+  - Position: {x: -1.6300001, y: 1.6000004, z: 0}
+    BlockData: {fileID: 11400000, guid: 3fd95f56f560b6449b1ea68f2e5837b1, type: 2}
+  - Position: {x: -3.79, y: 3.7600002, z: 0}
+    BlockData: {fileID: 11400000, guid: 772c1053ca86db64fbd9ad17fa6dfbab, type: 2}
+  - Position: {x: -1.6300001, y: 5.92, z: 0}
+    BlockData: {fileID: 11400000, guid: 772c1053ca86db64fbd9ad17fa6dfbab, type: 2}
+  - Position: {x: 2.69, y: 3.7600002, z: 0}
+    BlockData: {fileID: 11400000, guid: 772c1053ca86db64fbd9ad17fa6dfbab, type: 2}
+  - Position: {x: 2.69, y: 5.92, z: 0}
+    BlockData: {fileID: 11400000, guid: 772c1053ca86db64fbd9ad17fa6dfbab, type: 2}
+  - Position: {x: 0.53000003, y: 3.7600002, z: 0}
+    BlockData: {fileID: 11400000, guid: 772c1053ca86db64fbd9ad17fa6dfbab, type: 2}

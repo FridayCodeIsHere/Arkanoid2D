@@ -30,10 +30,8 @@ namespace ArkanoidProj
                 if (GUILayout.Button("Load Data"))
                 {
                     _data = (EditorData)AssetDatabase.LoadAssetAtPath("Assets/Editor/Data/EditorData.asset", typeof(EditorData));
-                    Debug.Log($"Data: {_data}");
                     _sceneEditor = CreateInstance<SceneEditor>();
                     _sceneEditor.SetLevelEditor(this, _parent);
-                    Debug.Log(this);
                 }
             }
             else
@@ -103,7 +101,7 @@ namespace ArkanoidProj
                 if (GUILayout.Button("Save Level"))
                 {
                     SaveLevel saveLevel = new SaveLevel();
-                    _gameLevel.Blocks = saveLevel.GetBlocks();
+                    saveLevel.Save(_gameLevel);
                     EditorUtility.SetDirty(_gameLevel);
                     Debug.Log("Level Saved");
                 }
@@ -126,9 +124,6 @@ namespace ArkanoidProj
         
         public BlockData GetBlock()
         {
-            Debug.Log($"Count Blocks in Data = {_data.BlockData.Count}");
-            Debug.Log($"Index selected block = {_index}");
-            Debug.Log($"Block Prefab: {_data.BlockData[_index].BlockData}");
             return _data.BlockData[_index].BlockData;
         }
     }
