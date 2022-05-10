@@ -1,7 +1,7 @@
-using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
+using UnityEngine;
 
 namespace ArkanoidProj
 {
@@ -14,14 +14,21 @@ namespace ArkanoidProj
                 GameObject game;
 
 #if UNITY_EDITOR
-                game = PrefabUtility.InstantiatePrefab(level.Blocks[i].BlockData.Block, parent) as GameObject;
+                game = PrefabUtility.InstantiatePrefab(level.Blocks[i].BlockData._block, parent) as GameObject;
                 if (game.TryGetComponent(out Block block))
                 {
                     block.BlockData = level.Blocks[i].BlockData;
                     block.SetData(level.Blocks[i].BlockData);
                 }
-#else
 
+
+#else
+                game = GameObject.Instantiate(level.Blocks[i].BlockData._block, parent);
+                if (game.TryGetComponent(out Block block1))
+                {
+                    BlockData blockData = level.Blocks[i].BlockData;
+                    block.SetData(blockData);
+                }
 #endif
                 game.transform.position = level.Blocks[i].Position;
             }

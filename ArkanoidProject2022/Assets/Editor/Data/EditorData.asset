@@ -12,8 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f032ab6d1f48aa84b8b3be2fec2afaa6, type: 3}
   m_Name: EditorData
   m_EditorClassIdentifier: 
-  _blockData:
-  - _texture2D: {fileID: 0}
-    _blockData: {fileID: 0}
-  - _texture2D: {fileID: 0}
-    _blockData: {fileID: 0}
+  BlockData:
+  - Texture2D: {fileID: 2800000, guid: 7482ee72dbfbdf341bd72ef6ca3cc51b, type: 3}
+    BlockData: {fileID: 11400000, guid: 772c1053ca86db64fbd9ad17fa6dfbab, type: 2}
+  - Texture2D: {fileID: 2800000, guid: 8a2a97b53a118ee4f9867f803bd2eb87, type: 3}
+    BlockData: {fileID: 11400000, guid: 86dc57e78ba611543b1e794e936853ac, type: 2}
+  - Texture2D: {fileID: 2800000, guid: bf8b0568f24efbc4aac49e6529385730, type: 3}
+    BlockData: {fileID: 11400000, guid: 2a0e7550c01eb3449b1e1eff42c7ac40, type: 2}
+  - Texture2D: {fileID: 2800000, guid: 419463112a8a80940a7b9b40d948b58a, type: 3}
+    BlockData: {fileID: 11400000, guid: ec124f1cfdeeea94b965b6af76fcb98a, type: 2}
+  - Texture2D: {fileID: 2800000, guid: 77e21a5701320764283397cb382f8aa2, type: 3}
+    BlockData: {fileID: 11400000, guid: 3fd95f56f560b6449b1ea68f2e5837b1, type: 2}
+  - Texture2D: {fileID: 2800000, guid: ae42d37842f29ca4081db75cdf5bcf90, type: 3}
+    BlockData: {fileID: 11400000, guid: 36f35d1a4faed2f40b1aa3db7b7eaf16, type: 2}
+  - Texture2D: {fileID: 2800000, guid: c1af3ca3db8429e429af1246f004f5f9, type: 3}
+    BlockData: {fileID: 11400000, guid: 22beb82154ca4d041bee74c5684714da, type: 2}
+  - Texture2D: {fileID: 2800000, guid: 1cb9480730730c743832e0b511628e4d, type: 3}
+    BlockData: {fileID: 11400000, guid: a8b57f229cce10a41aee2d3bad947c5b, type: 2}

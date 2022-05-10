@@ -16,7 +16,7 @@ namespace ArkanoidProj
         [SerializeField] private int _life;
 
 #if UNITY_EDITOR
-        [HideInInspector] public BlockData BlockData;
+        public BlockData BlockData;
 #endif
 
         private void OnEnable()
@@ -35,15 +35,15 @@ namespace ArkanoidProj
 
         public void SetData(BlockData blockData)
         {
-            _sprites = new List<Sprite>(blockData.Sprites);
-            _score = blockData.Score;
+            _sprites = new List<Sprite>(blockData._sprites);
+            _score = blockData._score;
 
             _spriteRenderer = GetComponent<SpriteRenderer>();
             _life = _sprites.Count;
             _spriteRenderer.sprite = _sprites[_life - 1];
 
             MainModule main = GetComponent<ParticleSystem>().main;
-            main.startColor = blockData.DropColor;
+            main.startColor = blockData._dropColor;
         }
 
         public void ApplyDamage()

@@ -15,6 +15,8 @@ namespace ArkanoidProj
         {
             _parent = parent;
             _levelEditor = levelEditor;
+            Debug.Log($"LevelEditor: {_levelEditor.GetBlock()._block}");
+            Debug.Log($"LevelEditor-1: {_levelEditor}");
         }
 
         public void OnSceneGUI(SceneView sceneView)
@@ -29,7 +31,9 @@ namespace ArkanoidProj
                 {
                     if (IsEmpty(position))
                     {
-                        GameObject game = PrefabUtility.InstantiatePrefab(_levelEditor.GetBlock().Block, _parent) as GameObject;
+                        GameObject game = PrefabUtility.InstantiatePrefab(_levelEditor.GetBlock()._block, _parent) as GameObject;
+                        Debug.Log(game);
+                        Debug.Log($"LevelEditor2: {_levelEditor.GetBlock()._block}");
                         game.transform.position = position;
 
                         if (game.TryGetComponent(out Block block))
