@@ -25,6 +25,16 @@ namespace ArkanoidProj
             _parent = (Transform)EditorGUILayout.ObjectField(_parent, typeof(Transform), true);
             EditorGUILayout.Space(30);
 
+            if (GUILayout.Button("Clear keys"))
+            {
+                LevelsData levelsData = new LevelsData();
+                levelsData.Clear();
+                LevelIndex levelIndex = new LevelIndex();
+                levelIndex.Clear();
+                Debug.Log("Clear keys");
+            }
+
+            EditorGUILayout.Space(30);
             if (_data == null)
             {
                 if (GUILayout.Button("Load Data"))
@@ -108,11 +118,7 @@ namespace ArkanoidProj
 
                 if (GUILayout.Button("Load Level"))
                 {
-                    GameObject[] allBlocks = GameObject.FindGameObjectsWithTag("Block");
-                    foreach (GameObject itemObj in allBlocks)
-                    {
-                        DestroyImmediate(itemObj.gameObject);
-                    }
+                    FindObjectOfType<ClearLevel>().Clear();
 
                     BlockGenerate generator = new BlockGenerate();
                     generator.Generate(_gameLevel, _parent);

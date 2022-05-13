@@ -32,9 +32,8 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 81caaad08ab331440b595a7a9492b23d, type: 3}
-    - {fileID: 2800000, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-    - {fileID: 2800000, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
     - {fileID: 2800000, guid: c64abf08a98b41f4f859029ae91e6498, type: 3}
+    - {fileID: 2800000, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -49,22 +48,6 @@ SpriteAtlas:
   - {fileID: -1249170468143461138, guid: 81caaad08ab331440b595a7a9492b23d, type: 3}
   - {fileID: 8474005138522095395, guid: 81caaad08ab331440b595a7a9492b23d, type: 3}
   - {fileID: 21300000, guid: c64abf08a98b41f4f859029ae91e6498, type: 3}
-  - {fileID: -3825731267725938715, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: -2114187770141809406, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: 5152947066715913429, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: -6450893561757416004, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: -2585876545772679680, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: 5963692554636824630, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: -6383012992949553685, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: -631920644261987563, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: -9170584647845674456, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: 2896506788295727252, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: -8353166514815688172, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: -2863356866228371879, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: -8204291458373471189, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: -6493049923832261803, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: -5928577598793341442, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
-  - {fileID: 2647163239253173074, guid: 36163d4bfa7a51847a957cdf2d43a63b, type: 3}
   - {fileID: 1846548210174212785, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
   - {fileID: 4701032791770644543, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
   - {fileID: 7987301519875167158, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
@@ -90,22 +73,6 @@ SpriteAtlas:
   - golem-tileset-ui3_3
   - golem-tileset-ui3_2
   - button
-  - golem-tileset-ui2_15
-  - golem-tileset-ui2_14
-  - golem-tileset-ui2_13
-  - golem-tileset-ui2_12
-  - golem-tileset-ui2_11
-  - golem-tileset-ui2_10
-  - golem-tileset-ui2_8
-  - golem-tileset-ui2_9
-  - golem-tileset-ui2_4
-  - golem-tileset-ui2_5
-  - golem-tileset-ui2_6
-  - golem-tileset-ui2_7
-  - golem-tileset-ui2_0
-  - golem-tileset-ui2_1
-  - golem-tileset-ui2_2
-  - golem-tileset-ui2_3
   - golem-tileset-bloky_1
   - golem-tileset-bloky_0
   - golem-tileset-bloky_3
