@@ -7,6 +7,7 @@ namespace ArkanoidProj
     [RequireComponent(typeof(Rigidbody2D))]
     public class BallMovement : MonoBehaviour
     {
+        [SerializeField] private GameObject _lineEffect;
         private Rigidbody2D _rigidbody;
         private bool _isActive = false;
         private const float Force = 400f;
@@ -29,8 +30,9 @@ namespace ArkanoidProj
 
         private void BallActivate()
         {
-            if (_isActive)
+            if (!_isActive)
             {
+                _lineEffect.SetActive(true);
                 _lastPositionX = transform.position.x;
                 _isActive = true;
                 transform.SetParent(null);

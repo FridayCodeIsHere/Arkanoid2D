@@ -35,7 +35,7 @@ namespace ArkanoidProj
             PlatformInput.OnMove -= Move;
         }
 
-        private void Start()
+        private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -52,6 +52,11 @@ namespace ArkanoidProj
         private void Move(float moveX)
         {
             _moveX = moveX;
+        }
+
+        public void ResetPosition()
+        {
+            _rigidbody.position = new Vector2(0f, _rigidbody.position.y);
         }
     }
 }

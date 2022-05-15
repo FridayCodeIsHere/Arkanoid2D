@@ -12,14 +12,26 @@ namespace ArkanoidProj
             {
                 foreach (Block block in blocks)
                 {
-#if UNITY_EDITOR
-                    DestroyImmediate(block.gameObject);
-#else
-                    Destroy(block.gameObject);
-#endif
+                    DestroyItem(block.gameObject);
                 }
             }
+            BallMovement[] balls = FindObjectsOfType<BallMovement>();
+            if (balls.Length > 0)
+            {
+                foreach(BallMovement ball in balls)
+                {
+                    DestroyItem(ball.gameObject);
+                }
+            }
+        }
 
+        private void DestroyItem(GameObject item)
+        {
+#if UNITY_EDITOR
+            DestroyImmediate(item.gameObject);
+#else
+            Destroy(item.gameObject);
+#endif
         }
     }
 }

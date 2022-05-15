@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
@@ -14,6 +15,12 @@ namespace ArkanoidProj
         [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private int _score;
         [SerializeField] private int _life;
+        [SerializeField] private BoxCollider2D _blockCollider;
+        [SerializeField] private BoxCollider2D _composite;
+        [SerializeField] private ParticleSystem _particleSystem;
+        
+        public static event Action OnEnded;
+        public static event Action<int> OnDestroyed;
 
 //#if UNITY_EDITOR
 //        public BlockData BlockData;
@@ -27,9 +34,10 @@ namespace ArkanoidProj
         private void OnDisable()
         {
             _count--;
+            OnDestroyed?.Invoke(_score);
             if (_count < 1)
             {
-                Debug.Log("Blocks ended");
+                OnEnded?.Invoke();
             }
         }
 
@@ -51,7 +59,12 @@ namespace ArkanoidProj
             _life--;
             if (_life < 1)
             {
-                Dead();
+                OnDestroyed?.Invoke(_score);
+                _particleSystem.Play();
+                _spriteRenderer.enabled = false;
+                _blockCollider.enabled = false;
+                _composite.enabled = false;
+                Invoke(nameof(Dead), 0.5f);
             }
             else
             {
@@ -61,9 +74,7 @@ namespace ArkanoidProj
 
         public void Dead()
         {
-            _spriteRenderer.enabled = false;
-            GetComponent<BoxCollider2D>().enabled = false;
-            GetComponent<ParticleSystem>().Play();
+            Destroy(this.gameObject);
         }
     }
 }

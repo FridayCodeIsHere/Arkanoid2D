@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6858874956801028746}
   - component: {fileID: 6858874956801028747}
   - component: {fileID: 6858874956801028744}
+  - component: {fileID: 2421120425097647751}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -165,3 +166,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 15
+--- !u!114 &2421120425097647751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858874956801028751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 663d1bbace64bab4cb516825e678797f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ballPrefab: {fileID: 7494871498037590296, guid: 21af6b0bd0c6da04a8a01782df357515, type: 3}
