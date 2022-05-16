@@ -174,53 +174,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3774772097009397688, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.5377358
-      objectReference: {fileID: 0}
-    - target: {fileID: 3774772097009397688, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.46641305
-      objectReference: {fileID: 0}
-    - target: {fileID: 3774772097009397688, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.3931559
-      objectReference: {fileID: 0}
-    - target: {fileID: 3774772097009397690, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-      propertyPath: _life
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3774772097009397690, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-      propertyPath: _score
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 3774772097009397690, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-      propertyPath: BlockData
-      value: 
-      objectReference: {fileID: 11400000, guid: 772c1053ca86db64fbd9ad17fa6dfbab, type: 2}
-    - target: {fileID: 3774772097009397690, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-      propertyPath: _spriteRenderer
-      value: 
-      objectReference: {fileID: 1255494063}
-    - target: {fileID: 3774772097009397690, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-      propertyPath: _sprites.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3774772097009397690, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-      propertyPath: _sprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 1846548210174212785, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
-    - target: {fileID: 3774772097009397690, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-      propertyPath: _sprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 4701032791770644543, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
     - target: {fileID: 3774772097009397693, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
       propertyPath: m_Name
       value: Block
-      objectReference: {fileID: 0}
-    - target: {fileID: 3774772097009397693, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
@@ -933,6 +889,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1 &365717153
@@ -1225,6 +1185,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1 &390729785
@@ -1405,6 +1369,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1001 &487668062
@@ -1506,6 +1474,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1 &491492709
@@ -2153,6 +2125,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1 &678477964
@@ -2329,6 +2305,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1 &713060453
@@ -2410,6 +2390,36 @@ CompositeCollider2D:
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
+  - m_Collider: {fileID: 1320137280}
+    m_ColliderPaths:
+    - - X: 10675507
+        Y: 53867732
+      - X: 10675507
+        Y: 64544848
+      - X: -144056
+        Y: 64544555
+      - X: -143763
+        Y: 53867732
+  - m_Collider: {fileID: 1391129205}
+    m_ColliderPaths:
+    - - X: 21475509
+        Y: -10932269
+      - X: 21475509
+        Y: -255146
+      - X: 10655944
+        Y: -255439
+      - X: 10656237
+        Y: -10932269
+  - m_Collider: {fileID: 1688232809}
+    m_ColliderPaths:
+    - - X: -32524493
+        Y: 10667732
+      - X: -32524493
+        Y: 21344854
+      - X: -43344056
+        Y: 21344561
+      - X: -43343763
+        Y: 10667732
   - m_Collider: {fileID: 1260110575}
     m_ColliderPaths:
     - - X: 43075507
@@ -2420,16 +2430,26 @@ CompositeCollider2D:
         Y: 21344561
       - X: 32256235
         Y: 10667732
-  - m_Collider: {fileID: 224536257}
+  - m_Collider: {fileID: 879758900}
     m_ColliderPaths:
-    - - X: -32524493
-        Y: -10932269
-      - X: -32524493
-        Y: -255146
-      - X: -43344056
-        Y: -255439
-      - X: -43343763
-        Y: -10932269
+    - - X: 10675507
+        Y: 21467730
+      - X: 10675507
+        Y: 32144854
+      - X: -144056
+        Y: 32144561
+      - X: -143763
+        Y: 21467730
+  - m_Collider: {fileID: 935004279}
+    m_ColliderPaths:
+    - - X: 21475509
+        Y: 21467730
+      - X: 21475509
+        Y: 32144854
+      - X: 10655944
+        Y: 32144561
+      - X: 10656237
+        Y: 21467730
   - m_Collider: {fileID: 278766818}
     m_ColliderPaths:
     - - X: 32275507
@@ -2450,56 +2470,16 @@ CompositeCollider2D:
         Y: -255439
       - X: -32543765
         Y: -10932269
-  - m_Collider: {fileID: 1688232809}
+  - m_Collider: {fileID: 1646167302}
     m_ColliderPaths:
-    - - X: -32524493
-        Y: 10667732
-      - X: -32524493
-        Y: 21344854
-      - X: -43344056
-        Y: 21344561
-      - X: -43343763
-        Y: 10667732
-  - m_Collider: {fileID: 1494153742}
-    m_ColliderPaths:
-    - - X: -10924494
-        Y: -10932269
-      - X: -10924494
-        Y: -255146
-      - X: -21744058
-        Y: -255439
-      - X: -21743765
-        Y: -10932269
-  - m_Collider: {fileID: 1178805580}
-    m_ColliderPaths:
-    - - X: 43075507
-        Y: 64667732
-      - X: 43075507
-        Y: 75344848
-      - X: 32255942
-        Y: 75344555
-      - X: 32256235
-        Y: 64667732
-  - m_Collider: {fileID: 1957634186}
-    m_ColliderPaths:
-    - - X: -32524493
-        Y: 64667732
-      - X: -32524493
-        Y: 75344848
-      - X: -43344056
-        Y: 75344555
-      - X: -43343763
-        Y: 64667732
-  - m_Collider: {fileID: 879758900}
-    m_ColliderPaths:
-    - - X: 10675507
-        Y: 21467730
-      - X: 10675507
-        Y: 32144854
-      - X: -144056
-        Y: 32144561
-      - X: -143763
-        Y: 21467730
+    - - X: -124493
+        Y: 53867732
+      - X: -124493
+        Y: 64544848
+      - X: -10944057
+        Y: 64544555
+      - X: -10943764
+        Y: 53867732
   - m_Collider: {fileID: 162130857}
     m_ColliderPaths:
     - - X: -10924494
@@ -2510,25 +2490,15 @@ CompositeCollider2D:
         Y: 32144561
       - X: -21743765
         Y: 21467730
-  - m_Collider: {fileID: 2099564684}
+  - m_Collider: {fileID: 224536257}
     m_ColliderPaths:
-    - - X: -124493
-        Y: 21467730
-      - X: -124493
-        Y: 32144854
-      - X: -10944057
-        Y: 32144561
-      - X: -10943764
-        Y: 21467730
-  - m_Collider: {fileID: 1391129205}
-    m_ColliderPaths:
-    - - X: 21475509
+    - - X: -32524493
         Y: -10932269
-      - X: 21475509
+      - X: -32524493
         Y: -255146
-      - X: 10655944
+      - X: -43344056
         Y: -255439
-      - X: 10656237
+      - X: -43343763
         Y: -10932269
   - m_Collider: {fileID: 992487719}
     m_ColliderPaths:
@@ -2540,36 +2510,46 @@ CompositeCollider2D:
         Y: -255439
       - X: 32256235
         Y: -10932269
-  - m_Collider: {fileID: 1320137280}
+  - m_Collider: {fileID: 1494153742}
     m_ColliderPaths:
-    - - X: 10675507
-        Y: 53867732
-      - X: 10675507
-        Y: 64544848
-      - X: -144056
-        Y: 64544555
-      - X: -143763
-        Y: 53867732
-  - m_Collider: {fileID: 1646167302}
+    - - X: -10924494
+        Y: -10932269
+      - X: -10924494
+        Y: -255146
+      - X: -21744058
+        Y: -255439
+      - X: -21743765
+        Y: -10932269
+  - m_Collider: {fileID: 2099564684}
     m_ColliderPaths:
     - - X: -124493
-        Y: 53867732
+        Y: 21467730
       - X: -124493
-        Y: 64544848
-      - X: -10944057
-        Y: 64544555
-      - X: -10943764
-        Y: 53867732
-  - m_Collider: {fileID: 935004279}
-    m_ColliderPaths:
-    - - X: 21475509
-        Y: 21467730
-      - X: 21475509
         Y: 32144854
-      - X: 10655944
+      - X: -10944057
         Y: 32144561
-      - X: 10656237
+      - X: -10943764
         Y: 21467730
+  - m_Collider: {fileID: 1957634186}
+    m_ColliderPaths:
+    - - X: -32524493
+        Y: 64667732
+      - X: -32524493
+        Y: 75344848
+      - X: -43344056
+        Y: 75344555
+      - X: -43343763
+        Y: 64667732
+  - m_Collider: {fileID: 1178805580}
+    m_ColliderPaths:
+    - - X: 43075507
+        Y: 64667732
+      - X: 43075507
+        Y: 75344848
+      - X: 32255942
+        Y: 75344555
+      - X: 32256235
+        Y: 64667732
   m_CompositePaths:
     m_Paths:
     - - {x: -3.2524786, y: 6.4667735}
@@ -3149,6 +3129,7 @@ GameObject:
   - component: {fileID: 887572105}
   - component: {fileID: 887572107}
   - component: {fileID: 887572106}
+  - component: {fileID: 887572108}
   m_Layer: 5
   m_Name: CrystalValue
   m_TagString: Untagged
@@ -3217,6 +3198,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887572104}
   m_CullTransparentMesh: 1
+--- !u!114 &887572108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887572104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcd4018517333894ca46f516a0f1ea5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 887572106}
 --- !u!1001 &914990281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3316,6 +3310,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!61 &935004279 stripped
@@ -3340,7 +3338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6461083360488866193, guid: b74012a73c9dee643ab564d7bad85b8a, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6461083360488866193, guid: b74012a73c9dee643ab564d7bad85b8a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3475,8 +3473,8 @@ GameObject:
   - component: {fileID: 1044365387}
   - component: {fileID: 1044365386}
   - component: {fileID: 1044365389}
-  - component: {fileID: 1044365390}
   - component: {fileID: 1044365391}
+  - component: {fileID: 1044365390}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3539,7 +3537,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1044365390}
-        m_TargetAssemblyTypeName: ArkanoidProj.ScoreController, Assembly-CSharp
+        m_TargetAssemblyTypeName: ArkanoidProj.LevelProgress, Assembly-CSharp
         m_MethodName: SetDefault
         m_Mode: 1
         m_Arguments:
@@ -3574,7 +3572,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1044365389
 MonoBehaviour:
@@ -3597,14 +3595,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 1044365385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363b75adb6e0a7640bfb7deb94f59708, type: 3}
+  m_Script: {fileID: 11500000, guid: a25cffd12b53dd3459e2994730e805e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _gameState: {fileID: 1044365389}
-  UiUpdate:
+  _UpdateScore:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 747506520}
+        m_TargetAssemblyTypeName: ArkanoidProj.IntToText, Assembly-CSharp
+        m_MethodName: SetInt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _UpdateCrystal:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 887572108}
         m_TargetAssemblyTypeName: ArkanoidProj.IntToText, Assembly-CSharp
         m_MethodName: SetInt
         m_Mode: 0
@@ -3629,7 +3642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _platformLife: {fileID: 1255104539}
-  _scoreController: {fileID: 1044365390}
+  _levelProgress: {fileID: 1044365390}
 --- !u!1001 &1052446907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3729,6 +3742,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1 &1090996842
@@ -4298,6 +4315,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!61 &1178805580 stripped
@@ -4676,6 +4697,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1 &1255104533 stripped
@@ -4683,11 +4708,10 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6858874956801028751, guid: 7301b66b651b7b043aecb0b12df99b19, type: 3}
   m_PrefabInstance: {fileID: 6858874954957827725}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1255104539
+--- !u!114 &1255104539 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1255104539, guid: 7301b66b651b7b043aecb0b12df99b19, type: 3}
+  m_PrefabInstance: {fileID: 6858874954957827725}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255104533}
   m_Enabled: 1
@@ -4695,72 +4719,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19434ad514308443a60b7b6ef29ef3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameState: {fileID: 1044365389}
-  OnAllLifeLosted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 263599472}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnLifeLosted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1535438360}
-        m_TargetAssemblyTypeName: ArkanoidProj.BallCreator, Assembly-CSharp
-        m_MethodName: Create
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1535438355}
-        m_TargetAssemblyTypeName: ArkanoidProj.PlatformMovement, Assembly-CSharp
-        m_MethodName: ResetPosition
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  UiUpdated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1090996844}
-        m_TargetAssemblyTypeName: ArkanoidProj.RenderLifes, Assembly-CSharp
-        m_MethodName: UpdateLife
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+--- !u!61 &1255104540
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255104533}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 0.4}
+    newSize: {x: 1.6, y: 0.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 0.4}
+  m_EdgeRadius: 0
 --- !u!4 &1255494058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3774772097009397687, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
-  m_PrefabInstance: {fileID: 100157711}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1255494063 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3774772097009397686, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
   m_PrefabInstance: {fileID: 100157711}
   m_PrefabAsset: {fileID: 0}
 --- !u!61 &1260110575 stripped
@@ -5026,6 +5013,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1 &1335223237
@@ -5165,15 +5156,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 10f4b51e120621f43930dfd52a64527d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5823,6 +5814,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1 &1793898281
@@ -6043,6 +6038,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!61 &1957634186 stripped
@@ -6797,6 +6796,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1 &2123895025
@@ -7109,6 +7112,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6973094628804773926, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
+      propertyPath: _parent
+      value: 
+      objectReference: {fileID: 713060454}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
 --- !u!1001 &6858874954957827725
@@ -7118,6 +7125,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1255104539, guid: 7301b66b651b7b043aecb0b12df99b19, type: 3}
+      propertyPath: _gameState
+      value: 
+      objectReference: {fileID: 1044365389}
+    - target: {fileID: 1255104539, guid: 7301b66b651b7b043aecb0b12df99b19, type: 3}
+      propertyPath: UiUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1090996844}
+    - target: {fileID: 1255104539, guid: 7301b66b651b7b043aecb0b12df99b19, type: 3}
+      propertyPath: OnAllLifeLosted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 263599472}
+    - target: {fileID: 6858874956801028741, guid: 7301b66b651b7b043aecb0b12df99b19, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6858874956801028745, guid: 7301b66b651b7b043aecb0b12df99b19, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7161,10 +7184,6 @@ PrefabInstance:
     - target: {fileID: 6858874956801028745, guid: 7301b66b651b7b043aecb0b12df99b19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6858874956801028750, guid: 7301b66b651b7b043aecb0b12df99b19, type: 3}
-      propertyPath: m_DrawMode
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6858874956801028751, guid: 7301b66b651b7b043aecb0b12df99b19, type: 3}
       propertyPath: m_Name

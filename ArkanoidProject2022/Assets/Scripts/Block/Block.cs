@@ -10,6 +10,8 @@ namespace ArkanoidProj
     public class Block : BaseBlock, IDamageable
     {
         private static int _count = 0;
+        private bool _hasCrystal = false;
+        private BlockData _blockData;
         
         [SerializeField] private List<Sprite> _sprites;
         [SerializeField] private SpriteRenderer _spriteRenderer;
@@ -18,6 +20,7 @@ namespace ArkanoidProj
         [SerializeField] private BoxCollider2D _blockCollider;
         [SerializeField] private BoxCollider2D _composite;
         [SerializeField] private ParticleSystem _particleSystem;
+        [SerializeField] private Crystal _crystal;
         
         public static event Action OnEnded;
         public static event Action<int> OnDestroyed;
@@ -43,6 +46,7 @@ namespace ArkanoidProj
 
         public void SetData(BlockData blockData)
         {
+            _blockData = blockData;
             _sprites = new List<Sprite>(blockData.Sprites);
             _score = blockData.Score;
 
@@ -52,6 +56,10 @@ namespace ArkanoidProj
 
             MainModule main = GetComponent<ParticleSystem>().main;
             main.startColor = blockData.DropColor;
+            if (blockData.Crystal != null)
+            {
+                _hasCrystal = true;
+            }
         }
 
         public void ApplyDamage()
@@ -64,6 +72,13 @@ namespace ArkanoidProj
                 _spriteRenderer.enabled = false;
                 _blockCollider.enabled = false;
                 _composite.enabled = false;
+                if (_hasCrystal)
+                {
+                    //_crystal.DropDown();
+                    Crystal crystal = Instantiate(_crystal, transform.position, Quaternion.identity, transform.root);
+                    crystal.SetSprite(_blockData.Crystal);
+                    crystal.DropDown();
+                }
                 Invoke(nameof(Dead), 0.5f);
             }
             else

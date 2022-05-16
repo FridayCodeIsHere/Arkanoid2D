@@ -7,7 +7,7 @@ namespace ArkanoidProj
     public class CalculationLevelProgress : MonoBehaviour
     {
         [SerializeField] private PlatformLife _platformLife;
-        [SerializeField] private ScoreController _scoreController;
+        [SerializeField] private LevelProgress _levelProgress;
         private Progress _progress = new Progress();
         private readonly LevelsData _levelsData = new LevelsData();
         private readonly LevelIndex _levelIndex = new LevelIndex();
@@ -28,7 +28,8 @@ namespace ArkanoidProj
             {
                 LevelIndex = _levelIndex.GetIndex(),
                 Life = _platformLife.Life,
-                Score = _scoreController.Score
+                Score = _levelProgress.ScoreCount,
+                Crystal = _levelProgress.CrystalCount
 
             };
 

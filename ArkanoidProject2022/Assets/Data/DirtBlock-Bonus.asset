@@ -17,3 +17,4 @@ MonoBehaviour:
   - {fileID: -38577866212145667, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
   _dropColor: {r: 0.6415094, g: 0.38445663, b: 0.12406549, a: 1}
   _score: 35
+  _crystal: {fileID: 3592253307284894137, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
