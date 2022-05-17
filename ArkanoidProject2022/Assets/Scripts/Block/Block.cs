@@ -74,7 +74,6 @@ namespace ArkanoidProj
                 _composite.enabled = false;
                 if (_hasCrystal)
                 {
-                    //_crystal.DropDown();
                     Crystal crystal = Instantiate(_crystal, transform.position, Quaternion.identity, transform.root);
                     crystal.SetSprite(_blockData.Crystal);
                     crystal.DropDown();

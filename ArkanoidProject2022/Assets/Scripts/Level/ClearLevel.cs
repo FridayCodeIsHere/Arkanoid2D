@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 namespace ArkanoidProj
 {
@@ -6,21 +7,20 @@ namespace ArkanoidProj
     {
         public void Clear()
         {
-            Block[] blocks = FindObjectsOfType<Block>();
+            DeleteObjectsOfType<Block>();
+            DeleteObjectsOfType<BallMovement>();
+            DeleteObjectsOfType<Crystal>();
+        }
 
-            if (blocks.Length > 0)
+        private void DeleteObjectsOfType<T>() where T : UnityEngine.Component
+        {
+            T[] items = FindObjectsOfType<T>();
+
+            if (items.Length > 0)
             {
-                foreach (Block block in blocks)
+                foreach(T item in items)
                 {
-                    DestroyItem(block.gameObject);
-                }
-            }
-            BallMovement[] balls = FindObjectsOfType<BallMovement>();
-            if (balls.Length > 0)
-            {
-                foreach(BallMovement ball in balls)
-                {
-                    DestroyItem(ball.gameObject);
+                    DestroyItem(item.gameObject);
                 }
             }
         }

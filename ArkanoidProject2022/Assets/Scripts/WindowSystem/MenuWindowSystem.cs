@@ -22,5 +22,10 @@ namespace ArkanoidProj
         {
             _settingsMenu.SetActive(true);
         }
+
+        public void CloseSetting()
+        {
+            _settingsMenu.SetActive(false);
+        }
     }
 }

@@ -58,14 +58,5 @@ namespace ArkanoidProj
         {
             _rigidbody.position = new Vector2(0f, _rigidbody.position.y);
         }
-
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            Debug.Log("work");
-            if (collision.gameObject.TryGetComponent(out Crystal crystal))
-            {
-                Debug.Log("Crystal is here");
-            }
-        }
     }
 }

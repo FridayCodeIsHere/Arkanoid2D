@@ -37,13 +37,11 @@ namespace ArkanoidProj
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("Work Collision");
             PlatformMovement platform = collision.gameObject.GetComponent<PlatformMovement>();
             LostZone lostZone = collision.gameObject.GetComponent<LostZone>();
 
             if (platform)
             {
-                Debug.Log("Collision with platform");
                 OnCollision?.Invoke();
                 Destroy(this.gameObject);
             }
