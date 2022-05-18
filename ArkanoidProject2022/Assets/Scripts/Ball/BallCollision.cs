@@ -18,15 +18,17 @@ namespace ArkanoidProj
         private void OnCollisionEnter2D(Collision2D collision)
         {
             float ballPositionX = transform.position.x;
+            PlatformMovement platformMove = collision.gameObject.GetComponent<PlatformMovement>();
 
-            if (collision.gameObject.TryGetComponent(out PlatformMovement platformMove))
+            if (platformMove)
             {
-                if (ballPositionX < _lastPositionX + 0.1 && ballPositionX > _lastPositionX - 0.1)
+                if (ballPositionX < _lastPositionX + 0.1f && ballPositionX > _lastPositionX - 0.1f)
                 {
                     float collisionPointX = collision.contacts[0].point.x;
-                    float playerCenterPosition = platformMove.gameObject.transform.position.x;
-                    float difference = playerCenterPosition - collisionPointX;
-                    float direction = collisionPointX < playerCenterPosition ? -1 : 1;
+                    float platformCenterPos = platformMove.gameObject.transform.position.x;
+                    
+                    float difference = platformCenterPos - collisionPointX;
+                    float direction = collisionPointX < platformCenterPos ? -1 : 1;
                     _ballMovement.AddForce(direction * Mathf.Abs(difference));
                 }
             }

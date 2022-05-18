@@ -9,12 +9,13 @@ namespace ArkanoidProj
     public class PlatformMovement : MonoBehaviour
     {
 
-        [SerializeField] private float _speed = 15f;
+        [SerializeField] private float _speed = 8f;
 
         private Rigidbody2D _rigidbody;
         private SpriteRenderer _spriteRenderer;
 
         private float _moveX = 0f;
+        private float _progress;
         private float _halfWidthPlatform;
         private const float BorderPosition = 5.1f;
 

@@ -10,6 +10,7 @@ namespace ArkanoidProj
 
         private Vector2 _startPosition = Vector2.zero;
         private float _direction = 0f;
+        private float _touchPosition;
 
         private void Update()
         {
@@ -40,8 +41,8 @@ namespace ArkanoidProj
                 switch (touch.phase)
                 {
                     case TouchPhase.Moved:
-                        if (touch.position.x > _startPosition.x + 15f) _direction = 1f;
-                        else if (touch.position.x < _startPosition.x - 15f) _direction = -1f;
+                        if (touch.position.x > _startPosition.x + 0.5f) _direction = 1f;
+                        else if (touch.position.x < _startPosition.x - 0.5f) _direction = -1f;
                         break;
                     default:
                         _startPosition = touch.position;
