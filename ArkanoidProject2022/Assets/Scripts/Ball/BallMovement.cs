@@ -35,17 +35,19 @@ namespace ArkanoidProj
                 _lineEffect.SetActive(true);
                 _lastPositionX = transform.position.x;
                 _isActive = true;
+                Debug.Log($"IsActive: {_isActive}");
                 transform.SetParent(null);
+                _rigidbody.bodyType = RigidbodyType2D.Dynamic;
+                AddForce();
             }
 
-            _rigidbody.bodyType = RigidbodyType2D.Dynamic;
-            AddForce();
+            
         }
 
         public void AddForce(float direction = 0f)
         {
             _rigidbody.velocity = Vector2.zero;
-            _rigidbody.AddForce(new Vector2(direction * (Force / 2), Force));
+            _rigidbody.AddForce(new Vector2(direction * (Force / 4), Force));
         }
     }
 }

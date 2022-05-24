@@ -20,11 +20,11 @@ namespace ArkanoidProj
                     baseBlock.BlockData = level.Blocks[i].BlockData;
                 }
 #else
-                game = GameObject.Instantiate(level.Blocks[i].BlockData._block, parent);
+                game = GameObject.Instantiate(level.Blocks[i].BlockData.Block, parent);
                 if (game.TryGetComponent(out Block block1))
                 {
                     BlockData blockData = level.Blocks[i].BlockData;
-                    block.SetData(blockData);
+                    block1.SetData(blockData);
                 }
 #endif
                 if (game.TryGetComponent(out Block block))

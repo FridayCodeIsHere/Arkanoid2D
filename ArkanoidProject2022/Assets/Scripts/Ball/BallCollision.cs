@@ -8,7 +8,8 @@ namespace ArkanoidProj
     public class BallCollision : MonoBehaviour
     {
         private BallMovement _ballMovement;
-        private float _lastPositionX;
+        private Vector2 _lastPosition;
+        private float _lastDirection;
 
         private void Awake()
         {
@@ -17,22 +18,31 @@ namespace ArkanoidProj
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            float ballPositionX = transform.position.x;
+            Vector2 currentPosition = transform.position;
             PlatformMovement platformMove = collision.gameObject.GetComponent<PlatformMovement>();
 
             if (platformMove)
             {
-                if (ballPositionX < _lastPositionX + 0.1f && ballPositionX > _lastPositionX - 0.1f)
+                if (currentPosition.x < _lastPosition.x + 0.1f && currentPosition.x > _lastPosition.x - 0.1f)
                 {
                     float collisionPointX = collision.contacts[0].point.x;
                     float platformCenterPos = platformMove.gameObject.transform.position.x;
-                    
+
                     float difference = platformCenterPos - collisionPointX;
                     float direction = collisionPointX < platformCenterPos ? -1 : 1;
                     _ballMovement.AddForce(direction * Mathf.Abs(difference));
+                    Debug.Log($"Direction {direction}, Difference: {difference}");
+                    _lastDirection = direction;
                 }
             }
-            _lastPositionX = ballPositionX;
+            else
+            {
+                if (currentPosition.y < _lastPosition.y + 0.3f && currentPosition.y > _lastPosition.y - 0.3f)
+                {
+                    //_ballMovement.AddForce(Random.Range(0,1));
+                }
+            }
+            _lastPosition = currentPosition;
 
             if (collision.gameObject.TryGetComponent(out IDamageable damageable))
             {

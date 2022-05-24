@@ -45,9 +45,12 @@ namespace ArkanoidProj
 
         private void FixedUpdate()
         {
-            float positionX = _rigidbody.position.x + _moveX * _speed * Time.fixedDeltaTime;
-            positionX = Mathf.Clamp(positionX, -BorderPosition + (_halfWidthPlatform), BorderPosition - (_halfWidthPlatform));
-            _rigidbody.MovePosition(new Vector2(positionX, _rigidbody.position.y));
+            //float positionX = _rigidbody.position.x + _moveX * _speed * Time.fixedDeltaTime;
+            //positionX = Mathf.Clamp(positionX, -BorderPosition + (_halfWidthPlatform), BorderPosition - (_halfWidthPlatform));
+            //_rigidbody.MovePosition(new Vector2(positionX, _rigidbody.position.y));
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos.x = Mathf.Clamp(mousePos.x, -BorderPosition + (_halfWidthPlatform), BorderPosition - (_halfWidthPlatform));
+            transform.position = new Vector2(mousePos.x, transform.position.y);
         }
 
         private void Move(float moveX)
