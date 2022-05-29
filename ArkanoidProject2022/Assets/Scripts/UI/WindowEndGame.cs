@@ -10,7 +10,8 @@ namespace ArkanoidProj {
 
         private void OnEnable()
         {
-            EndGameData endGameData = _calculationLevel.EndGameData;
+            TypeOfLevel typeLevel = LevelNavigator.Instance.LevelType;
+            EndGameData endGameData = _calculationLevel.GetEndData(typeLevel);
             _scoreText.text = endGameData.Score.ToString();
             _crystalText.text = endGameData.Crystal.ToString();
         }

@@ -3,35 +3,64 @@ using UnityEngine;
 namespace ArkanoidProj {
     public class LevelsData
     {
-        private const string KeyName = "Save";
+        private const string BlueKeyLevel = "BlueKey";
+        private const string LightBlueKeyLevel = "LightBlueKey";
+        private const string RedKeyLevel = "RedKey";
+        private const string LightRedKeyLevel = "LightRedKey";
+
         private LevelsProgress _levelsProgress = new LevelsProgress();
 
         private void SaveData()
         {
+            string key = GetKeyOfTypeLevel();
             string saveJson = JsonUtility.ToJson(_levelsProgress);
-            PlayerPrefs.SetString(KeyName, saveJson);
+            PlayerPrefs.SetString(key, saveJson);
             PlayerPrefs.Save();
+        }
+
+        private string GetKeyOfTypeLevel()
+        {
+            TypeOfLevel typeLevel = LevelNavigator.Instance.LevelType;
+            string key = "";
+            switch (typeLevel)
+            {
+                case TypeOfLevel.Blue:
+                    key = BlueKeyLevel;
+                    break;
+                case TypeOfLevel.LightBlue:
+                    key = LightBlueKeyLevel;
+                    break;
+                case TypeOfLevel.Red:
+                    key = RedKeyLevel;
+                    break;
+                case TypeOfLevel.LightRed:
+                    key = LightRedKeyLevel;
+                    break;
+            }
+            return key;
         }
 
         public void NewData()
         {
-            int levelCount = Resources.LoadAll<GameLevel>("Levels").Length;
+            TypeOfLevel folderName = LevelNavigator.Instance.LevelType;
+            string path = $"Levels/{LevelNavigator.Instance.GetPathToLevels()}";
+            int levelCount = Resources.LoadAll<GameLevel>(path).Length;
+
             for (int i = 0; i < levelCount; i++)
             {
-                _levelsProgress.Levels.Add(new Progress());
+                _levelsProgress.AddToCurrentTypeLevel(new Progress());
             }
-            
 
-            _levelsProgress.Levels[0].IsOpened = true;
+            _levelsProgress.AddToCurrentTypeLevel(0, true);
             SaveData();
             Resources.UnloadUnusedAssets();
         }
 
         public LevelsProgress GetLevelProgress()
         {
-            if (PlayerPrefs.HasKey(KeyName))
+            if (PlayerPrefs.HasKey(GetKeyOfTypeLevel()))
             {
-                string saveJson = PlayerPrefs.GetString(KeyName);
+                string saveJson = PlayerPrefs.GetString(GetKeyOfTypeLevel());
                 _levelsProgress = JsonUtility.FromJson<LevelsProgress>(saveJson);
             }
             else
@@ -44,10 +73,10 @@ namespace ArkanoidProj {
         public void SaveLevelData(int index, Progress progress)
         {
             _levelsProgress = GetLevelProgress();
-            _levelsProgress.Levels[index] = progress;
-            if (index < _levelsProgress.Levels.Count - 1)
+            _levelsProgress.AddToCurrentTypeLevel(index, progress);
+            if (index < _levelsProgress.CountItemsInTypeLevel() - 1)
             {
-                _levelsProgress.Levels[index + 1].IsOpened = true;
+                _levelsProgress.AddToCurrentTypeLevel(index + 1, true);
             }
             SaveData();
             
@@ -55,7 +84,10 @@ namespace ArkanoidProj {
 
         public void Clear()
         {
-            PlayerPrefs.DeleteKey(KeyName);
+            PlayerPrefs.DeleteKey(BlueKeyLevel);
+            PlayerPrefs.DeleteKey(LightBlueKeyLevel);
+            PlayerPrefs.DeleteKey(RedKeyLevel);
+            PlayerPrefs.DeleteKey(LightRedKeyLevel);
         }
     }
 }

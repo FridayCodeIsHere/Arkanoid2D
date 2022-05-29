@@ -1,30 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SaveArea : MonoBehaviour
+namespace ArkanoidProj
 {
-    private void Awake()
+    public class SaveArea : MonoBehaviour
     {
-        UpdateSaveArea();
-    }
+        public static Vector2 OriginalAnchor; 
 
-    private void UpdateSaveArea()
-    {
-        Rect safeArea = Screen.safeArea;
-        RectTransform rectTransform = GetComponent<RectTransform>();
+        private void Awake()
+        {
+            UpdateSaveArea();
+        }
 
-        Vector2 anchorMin = safeArea.position;
-        Vector2 anchorMax = safeArea.position + safeArea.size;
-        Debug.Log($"Size: {anchorMax}");
+        private void UpdateSaveArea()
+        {
+            Rect safeArea = Screen.safeArea;
+            RectTransform rectTransform = GetComponent<RectTransform>();
 
-        anchorMin.x /= Screen.width;
-        anchorMin.y /= Screen.height;
+            Vector2 anchorMin = safeArea.position;
+            Vector2 anchorMax = safeArea.position + safeArea.size;
+            OriginalAnchor = anchorMax;
+            //Debug.Log($"Up position = {anchorMax.y / 2 * GetPixelInUnits()}");
 
-        anchorMax.x /= Screen.width;
-        anchorMax.y /= Screen.height;
+            //_topCollider.transform.position = Vector2.up * anchorMax / 2 * GetPixelInUnits();
 
-        rectTransform.anchorMin = anchorMin;
-        rectTransform.anchorMax = anchorMax;
+            anchorMin.x /= Screen.width;
+            anchorMin.y /= Screen.height;
+
+            anchorMax.x /= Screen.width;
+            anchorMax.y /= Screen.height;
+
+            rectTransform.anchorMin = anchorMin;
+            rectTransform.anchorMax = anchorMax;
+
+        }
+
+        
     }
 }

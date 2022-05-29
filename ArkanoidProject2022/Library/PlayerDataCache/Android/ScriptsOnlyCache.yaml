@@ -1,7 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-Editor.dll:
+    - ArkanoidProj.EditorData
     - ArkanoidProj.LevelEditor
+    - ArkanoidProj.SceneEditor
     Assembly-CSharp.dll:
     - ArkanoidProj.AudioButton
     - ArkanoidProj.BallCollision
@@ -21,18 +23,22 @@ ScriptsOnlyBuild:
     - ArkanoidProj.IntToText
     - ArkanoidProj.LevelButton
     - ArkanoidProj.LevelGenerator
+    - ArkanoidProj.LevelNavigator
     - ArkanoidProj.LevelProgress
     - ArkanoidProj.LoadingScreen
     - ArkanoidProj.LostZone
     - ArkanoidProj.MenuWindowSystem
+    - ArkanoidProj.PanelLevels
     - ArkanoidProj.PlatformInput
     - ArkanoidProj.PlatformLife
     - ArkanoidProj.PlatformMovement
     - ArkanoidProj.RenderLifes
+    - ArkanoidProj.SaveArea
+    - ArkanoidProj.TopCollider
     - ArkanoidProj.WindowController
     - ArkanoidProj.WindowEndGame
     - ArkanoidProj.WindowEvent
-    - SaveArea
+    - LevelsContent
     - UIColliderSetter
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -120,67 +126,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1460}
     - Class: 114
-      Script: {instanceID: 1514}
+      Script: {instanceID: 1462}
     - Class: 114
-      Script: {instanceID: 1544}
+      Script: {instanceID: 1516}
     - Class: 114
-      Script: {instanceID: 1664}
+      Script: {instanceID: 1548}
     - Class: 114
-      Script: {instanceID: 1880}
+      Script: {instanceID: 1676}
     - Class: 114
-      Script: {instanceID: 2262}
+      Script: {instanceID: 1900}
     - Class: 114
-      Script: {instanceID: 2276}
+      Script: {instanceID: 2302}
     - Class: 114
-      Script: {instanceID: 2584}
+      Script: {instanceID: 2612}
     - Class: 114
-      Script: {instanceID: 2700}
+      Script: {instanceID: 2730}
     - Class: 114
-      Script: {instanceID: 2812}
+      Script: {instanceID: 2842}
     - Class: 114
-      Script: {instanceID: 2874}
+      Script: {instanceID: 2904}
     - Class: 114
-      Script: {instanceID: 3112}
+      Script: {instanceID: 3150}
     - Class: 114
-      Script: {instanceID: 3358}
+      Script: {instanceID: 3404}
     - Class: 114
-      Script: {instanceID: 3366}
+      Script: {instanceID: 3412}
     - Class: 114
-      Script: {instanceID: 3480}
+      Script: {instanceID: 3530}
     - Class: 114
-      Script: {instanceID: 3516}
+      Script: {instanceID: 3566}
     - Class: 114
-      Script: {instanceID: 3740}
+      Script: {instanceID: 3794}
     - Class: 114
-      Script: {instanceID: 4102}
+      Script: {instanceID: 3898}
     - Class: 114
-      Script: {instanceID: 4236}
+      Script: {instanceID: 4160}
     - Class: 114
-      Script: {instanceID: 4902}
+      Script: {instanceID: 4296}
     - Class: 114
-      Script: {instanceID: 5190}
+      Script: {instanceID: 4652}
     - Class: 114
-      Script: {instanceID: 5202}
+      Script: {instanceID: 4976}
     - Class: 114
-      Script: {instanceID: 5462}
+      Script: {instanceID: 5270}
+    - Class: 114
+      Script: {instanceID: 5282}
     - Class: 114
       Script: {instanceID: 5548}
     - Class: 114
-      Script: {instanceID: 5650}
+      Script: {instanceID: 5634}
     - Class: 114
-      Script: {instanceID: 5700}
+      Script: {instanceID: 5744}
     - Class: 114
-      Script: {instanceID: 5748}
+      Script: {instanceID: 5794}
     - Class: 114
-      Script: {instanceID: 5756}
+      Script: {instanceID: 5844}
     - Class: 114
-      Script: {instanceID: 5768}
+      Script: {instanceID: 5852}
     - Class: 114
-      Script: {instanceID: 5832}
+      Script: {instanceID: 5864}
     - Class: 114
-      Script: {instanceID: 5918}
+      Script: {instanceID: 5930}
     - Class: 114
-      Script: {instanceID: 31254}
+      Script: {instanceID: 6016}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -233,43 +241,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1460}
     - Class: 114
-      Script: {instanceID: 2262}
+      Script: {instanceID: 1462}
     - Class: 114
-      Script: {instanceID: 2280}
+      Script: {instanceID: 1574}
     - Class: 114
-      Script: {instanceID: 2454}
+      Script: {instanceID: 1650}
     - Class: 114
-      Script: {instanceID: 2584}
+      Script: {instanceID: 2306}
     - Class: 114
-      Script: {instanceID: 2700}
+      Script: {instanceID: 2480}
     - Class: 114
-      Script: {instanceID: 2874}
+      Script: {instanceID: 2612}
     - Class: 114
-      Script: {instanceID: 2924}
+      Script: {instanceID: 2730}
     - Class: 114
-      Script: {instanceID: 3112}
+      Script: {instanceID: 2904}
     - Class: 114
-      Script: {instanceID: 3366}
+      Script: {instanceID: 2954}
     - Class: 114
-      Script: {instanceID: 3480}
+      Script: {instanceID: 3150}
     - Class: 114
-      Script: {instanceID: 3516}
+      Script: {instanceID: 3224}
     - Class: 114
-      Script: {instanceID: 3526}
+      Script: {instanceID: 3412}
     - Class: 114
-      Script: {instanceID: 3714}
+      Script: {instanceID: 3530}
     - Class: 114
-      Script: {instanceID: 3864}
+      Script: {instanceID: 3566}
     - Class: 114
-      Script: {instanceID: 4552}
+      Script: {instanceID: 3578}
     - Class: 114
-      Script: {instanceID: 4762}
+      Script: {instanceID: 3768}
     - Class: 114
-      Script: {instanceID: 5600}
+      Script: {instanceID: 3920}
     - Class: 114
-      Script: {instanceID: 5768}
+      Script: {instanceID: 4620}
     - Class: 114
-      Script: {instanceID: 5808}
+      Script: {instanceID: 4652}
+    - Class: 114
+      Script: {instanceID: 4834}
+    - Class: 114
+      Script: {instanceID: 5688}
+    - Class: 114
+      Script: {instanceID: 5864}
+    - Class: 114
+      Script: {instanceID: 5908}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -303,6 +319,12 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -327,6 +349,12 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: fd1cdb910315ced1b51dcdd0595ef6bd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: LevelNavigator
+  - hash:
+      serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
@@ -337,6 +365,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: PanelLevels
   - hash:
       serializedVersion: 2
       Hash: bcaee4c2a83047257b5f47d6ed264b75
@@ -409,12 +443,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
-  - hash:
-      serializedVersion: 2
-      Hash: 699619b86d9359741a4f58540298c80b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -555,6 +583,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelsContent
+  - hash:
+      serializedVersion: 2
       Hash: 9b2d72155209a515197b0788f9f11a91
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
@@ -627,7 +661,7 @@ ScriptsOnlyBuild:
     className: Crystal
   - hash:
       serializedVersion: 2
-      Hash: 7e332dc73d7126f3cd84f438b320eb36
+      Hash: fb500a25e51b937fce488b1444888b40
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: MenuWindowSystem
@@ -655,6 +689,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: d5eb1c627b71b93929a5c919be177f0b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: TopCollider
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -787,6 +827,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: SaveArea
   - hash:
       serializedVersion: 2
       Hash: 523ce309f50d9eee6a8fc0e2f86c9c97
@@ -1009,12 +1055,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIColliderSetter
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SaveArea
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity

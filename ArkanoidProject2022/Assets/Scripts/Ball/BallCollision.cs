@@ -37,7 +37,7 @@ namespace ArkanoidProj
             }
             else
             {
-                if (currentPosition.y < _lastPosition.y + 0.3f && currentPosition.y > _lastPosition.y - 0.3f)
+                if (currentPosition.y < _lastPosition.y + 0.35f && currentPosition.y > _lastPosition.y - 0.35f)
                 {
                     //_ballMovement.AddForce(Random.Range(0,1));
                 }

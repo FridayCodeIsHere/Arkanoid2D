@@ -12,21 +12,19 @@ namespace ArkanoidProj
         private readonly LevelsData _levelsData = new LevelsData();
         private readonly LevelIndex _levelIndex = new LevelIndex();
         private EndGameData _endGameData;
-        public EndGameData EndGameData
+
+        public EndGameData GetEndData(TypeOfLevel typeLevel)
         {
-            get
-            {
-                Calculate();
-                return _endGameData;
-            }
+            Calculate(typeLevel);
+            return _endGameData;
         }
 
-        private void Calculate()
+        private void Calculate(TypeOfLevel typeLevel)
         {
-            _progress = _levelsData.GetLevelProgress().Levels[_levelIndex.GetIndex()];
+            _progress = _levelsData.GetLevelProgress().GetIndexProgressOfTypeLevel(_levelIndex.GetIndex(typeLevel));
             _endGameData = new EndGameData()
             {
-                LevelIndex = _levelIndex.GetIndex(),
+                LevelIndex = _levelIndex.GetIndex(typeLevel),
                 Life = _platformLife.Life,
                 Score = _levelProgress.ScoreCount,
                 Crystal = _levelProgress.CrystalCount
@@ -35,7 +33,7 @@ namespace ArkanoidProj
 
             if (_platformLife.Life > 0)
             {
-                _levelsData.SaveLevelData(_levelIndex.GetIndex(), _progress);
+                _levelsData.SaveLevelData(_levelIndex.GetIndex(typeLevel), _progress);
             }
         }
 

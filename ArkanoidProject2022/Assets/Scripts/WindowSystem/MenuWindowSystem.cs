@@ -7,10 +7,28 @@ namespace ArkanoidProj
     public class MenuWindowSystem : MonoBehaviour
     {
         [SerializeField] private GameObject _settingsMenu;
-        
-        public void ExitGame()
+        [SerializeField] private GameObject _panelLevels;
+        [SerializeField] private GameObject _levels;
+        [SerializeField] private LevelsContent _content;
+
+
+        private void Start()
         {
-            Application.Quit();
+            LoadingScreen.Screen.Enable(false);
+        }
+        public void Back()
+        {
+            if (_panelLevels.activeInHierarchy)
+            {
+                Application.Quit();
+            }
+            else
+            {
+                _content.ClearContent();
+                _panelLevels.SetActive(true);
+                _levels.SetActive(false);
+            }
+            
         }
 
         public void RatingWindow()

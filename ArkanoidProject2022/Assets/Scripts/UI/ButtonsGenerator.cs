@@ -12,21 +12,21 @@ namespace ArkanoidProj
 
         private void Start()
         {
-            Generate();
+            //Generate();
         }
 
-        private void Generate()
+        public void Generate()
         {
             LevelsData levelsData = new LevelsData();
             LevelsProgress levelsProgress = levelsData.GetLevelProgress();
 
-            for (int i = 0; i < levelsProgress.Levels.Count; i++)
+            for (int i = 0; i < levelsProgress.CountItemsInTypeLevel(); i++)
             {
                 Button button = Instantiate(_buttonPrefab, _content.transform);
 
                 if (button.gameObject.TryGetComponent(out LevelButton levelButton))
                 {
-                    levelButton.SetData(levelsProgress.Levels[i], i);
+                    levelButton.SetData(levelsProgress.GetIndexProgressOfTypeLevel(i), i);
                 }
             }
             LoadingScreen.Screen.Enable(false);

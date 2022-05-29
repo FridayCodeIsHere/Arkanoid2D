@@ -19,9 +19,10 @@ namespace ArkanoidProj
 
         public void LevelSelected()
         {
+            TypeOfLevel typeLevel = LevelNavigator.Instance.LevelType;
             LoadingScreen.Screen.Enable(true);
             LevelIndex levelIndex = new LevelIndex();
-            levelIndex.SetIndex(_index);
+            levelIndex.SetIndex(typeLevel, _index);
 
             Loader loader = new Loader();
             loader.LoadingMainScene(false);

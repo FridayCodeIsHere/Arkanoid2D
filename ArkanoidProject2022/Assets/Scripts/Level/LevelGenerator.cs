@@ -22,7 +22,13 @@ namespace ArkanoidProj
         private void Init()
         {
             _clearLevel.Clear();
-            GameLevel gameLevel = Resources.Load<GameLevel>($"Levels/Level-{_levelIndex.GetIndex()}");
+
+            TypeOfLevel typeLevel = LevelNavigator.Instance.LevelType;
+            string path = $"Levels/{LevelNavigator.Instance.GetPathToLevels()}/Level-{_levelIndex.GetIndex(typeLevel)}";
+            Debug.Log($"Initialization Level Generator. Path selected: {path}");
+
+            GameLevel gameLevel = Resources.Load<GameLevel>(path);
+
             if (gameLevel != null)
             {
                 _blockGenerate.Generate(gameLevel, _parentBlocks);
@@ -41,12 +47,14 @@ namespace ArkanoidProj
 
         public void GenerateNext()
         {
+            TypeOfLevel typeLevel = LevelNavigator.Instance.LevelType;
             LevelsData levelsData = new LevelsData();
-            int tempIndex = _levelIndex.GetIndex();
+            int tempIndex = _levelIndex.GetIndex(typeLevel);
+            //levelsData.GetLevelProgress().Levels.Count - 1
 
-            if (tempIndex < levelsData.GetLevelProgress().Levels.Count - 1)
+            if (tempIndex < levelsData.GetLevelProgress().CountItemsInTypeLevel() - 1)
             {
-                _levelIndex.SetIndex(tempIndex + 1);
+                _levelIndex.SetIndex(typeLevel, tempIndex + 1);
                 Generate();
             }
             else
