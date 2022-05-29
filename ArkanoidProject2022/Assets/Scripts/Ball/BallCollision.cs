@@ -30,7 +30,7 @@ namespace ArkanoidProj
 
                     float difference = platformCenterPos - collisionPointX;
                     float direction = collisionPointX < platformCenterPos ? -1 : 1;
-                    _ballMovement.AddForce(direction * Mathf.Abs(difference));
+                    _ballMovement.AddForce(direction * Mathf.Abs(difference), 1); //always shoot up from platform
                     Debug.Log($"Direction {direction}, Difference: {difference}");
                     _lastDirection = direction;
                 }
