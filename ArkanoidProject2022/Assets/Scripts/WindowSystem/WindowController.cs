@@ -66,6 +66,7 @@ namespace ArkanoidProj
             {
                 _gameState.SetState(State.StopGame);
                 _victoryWindow.SetActive(true);
+                Debug.Log("EndGame");
             }
         }
     }

@@ -33,6 +33,7 @@ ScriptsOnlyBuild:
     - ArkanoidProj.PlatformLife
     - ArkanoidProj.PlatformMovement
     - ArkanoidProj.RenderLifes
+    - ArkanoidProj.Rotate
     - ArkanoidProj.SaveArea
     - ArkanoidProj.TopCollider
     - ArkanoidProj.WindowController
@@ -47,7 +48,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
-    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -60,7 +60,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.DeviceSimulator.Editor.dll:
     - UnityEditor.DeviceSimulation.DeviceInfoAsset
-    - UnityEditor.DeviceSimulation.SimulatorWindow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -138,57 +137,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2302}
     - Class: 114
-      Script: {instanceID: 2612}
+      Script: {instanceID: 2500}
     - Class: 114
-      Script: {instanceID: 2730}
+      Script: {instanceID: 2614}
     - Class: 114
-      Script: {instanceID: 2842}
+      Script: {instanceID: 2732}
     - Class: 114
-      Script: {instanceID: 2904}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 3150}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 3404}
+      Script: {instanceID: 3152}
     - Class: 114
-      Script: {instanceID: 3412}
+      Script: {instanceID: 3406}
     - Class: 114
-      Script: {instanceID: 3530}
+      Script: {instanceID: 3414}
     - Class: 114
-      Script: {instanceID: 3566}
+      Script: {instanceID: 3532}
     - Class: 114
-      Script: {instanceID: 3794}
+      Script: {instanceID: 3568}
     - Class: 114
-      Script: {instanceID: 3898}
+      Script: {instanceID: 3796}
     - Class: 114
-      Script: {instanceID: 4160}
+      Script: {instanceID: 3900}
     - Class: 114
-      Script: {instanceID: 4296}
+      Script: {instanceID: 4162}
     - Class: 114
-      Script: {instanceID: 4652}
+      Script: {instanceID: 4298}
     - Class: 114
-      Script: {instanceID: 4976}
+      Script: {instanceID: 4654}
     - Class: 114
-      Script: {instanceID: 5270}
+      Script: {instanceID: 4978}
     - Class: 114
-      Script: {instanceID: 5282}
+      Script: {instanceID: 5272}
     - Class: 114
-      Script: {instanceID: 5548}
+      Script: {instanceID: 5284}
     - Class: 114
-      Script: {instanceID: 5634}
+      Script: {instanceID: 5550}
     - Class: 114
-      Script: {instanceID: 5744}
+      Script: {instanceID: 5636}
     - Class: 114
-      Script: {instanceID: 5794}
+      Script: {instanceID: 5746}
     - Class: 114
-      Script: {instanceID: 5844}
+      Script: {instanceID: 5796}
     - Class: 114
-      Script: {instanceID: 5852}
+      Script: {instanceID: 5846}
     - Class: 114
-      Script: {instanceID: 5864}
+      Script: {instanceID: 5854}
     - Class: 114
-      Script: {instanceID: 5930}
+      Script: {instanceID: 5866}
     - Class: 114
-      Script: {instanceID: 6016}
+      Script: {instanceID: 5932}
+    - Class: 114
+      Script: {instanceID: 6018}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -251,41 +252,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2480}
     - Class: 114
-      Script: {instanceID: 2612}
+      Script: {instanceID: 2614}
     - Class: 114
-      Script: {instanceID: 2730}
+      Script: {instanceID: 2732}
     - Class: 114
-      Script: {instanceID: 2904}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 2954}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 3150}
+      Script: {instanceID: 3152}
     - Class: 114
-      Script: {instanceID: 3224}
+      Script: {instanceID: 3226}
     - Class: 114
-      Script: {instanceID: 3412}
+      Script: {instanceID: 3414}
     - Class: 114
-      Script: {instanceID: 3530}
+      Script: {instanceID: 3532}
     - Class: 114
-      Script: {instanceID: 3566}
+      Script: {instanceID: 3568}
     - Class: 114
-      Script: {instanceID: 3578}
+      Script: {instanceID: 3580}
     - Class: 114
-      Script: {instanceID: 3768}
+      Script: {instanceID: 3770}
     - Class: 114
-      Script: {instanceID: 3920}
+      Script: {instanceID: 3922}
     - Class: 114
-      Script: {instanceID: 4620}
+      Script: {instanceID: 4622}
     - Class: 114
-      Script: {instanceID: 4652}
+      Script: {instanceID: 4654}
     - Class: 114
-      Script: {instanceID: 4834}
+      Script: {instanceID: 4836}
     - Class: 114
-      Script: {instanceID: 5688}
+      Script: {instanceID: 5690}
     - Class: 114
-      Script: {instanceID: 5864}
+      Script: {instanceID: 5866}
     - Class: 114
-      Script: {instanceID: 5908}
+      Script: {instanceID: 5910}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -479,6 +480,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: AudioButton
+  - hash:
+      serializedVersion: 2
+      Hash: 3cf156985df62fac63708d6bed3583bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: Rotate
   - hash:
       serializedVersion: 2
       Hash: 03b188d17aebfe1c86a5c4d4f90de589
