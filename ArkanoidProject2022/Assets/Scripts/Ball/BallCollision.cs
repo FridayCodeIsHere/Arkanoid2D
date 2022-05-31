@@ -30,8 +30,7 @@ namespace ArkanoidProj
 
                     float difference = platformCenterPos - collisionPointX;
                     float direction = collisionPointX < platformCenterPos ? -1 : 1;
-                    _ballMovement.AddForce(direction * Mathf.Abs(difference), 1); //always shoot up from platform
-                    Debug.Log($"Direction {direction}, Difference: {difference}");
+                    _ballMovement.AddForce(direction * Mathf.Abs(difference), 1);
                     _lastDirection = direction;
                 }
             }
@@ -39,7 +38,8 @@ namespace ArkanoidProj
             {
                 if (currentPosition.y < _lastPosition.y + 0.35f && currentPosition.y > _lastPosition.y - 0.35f)
                 {
-                    //_ballMovement.AddForce(Random.Range(0,1));
+                    Debug.Log("The same Y position");
+                    //Change direction of the ball here
                 }
             }
             _lastPosition = currentPosition;

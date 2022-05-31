@@ -21,11 +21,10 @@ namespace ArkanoidProj
 
         private void Init()
         {
-            _clearLevel.Clear();
+            _clearLevel.ClearLevelItems();
 
             TypeOfLevel typeLevel = LevelNavigator.Instance.LevelType;
             string path = $"Levels/{LevelNavigator.Instance.GetPathToLevels()}/Level-{_levelIndex.GetIndex(typeLevel)}";
-            Debug.Log($"Initialization Level Generator. Path selected: {path}");
 
             GameLevel gameLevel = Resources.Load<GameLevel>(path);
 

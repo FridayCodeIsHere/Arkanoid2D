@@ -9,6 +9,7 @@ namespace ArkanoidProj
         [SerializeField] private GameObject _settingsMenu;
         [SerializeField] private GameObject _panelLevels;
         [SerializeField] private GameObject _levels;
+        [SerializeField] private GameObject _exitWindow;
         [SerializeField] private LevelsContent _content;
 
 
@@ -20,7 +21,7 @@ namespace ArkanoidProj
         {
             if (_panelLevels.activeInHierarchy)
             {
-                Application.Quit();
+                ExitWindow();
             }
             else
             {
@@ -41,9 +42,26 @@ namespace ArkanoidProj
             _settingsMenu.SetActive(true);
         }
 
-        public void CloseSetting()
+        public void HideSettingsMenu()
         {
-            _settingsMenu.SetActive(false);
+            Animator anim = _settingsMenu.GetComponent<Animator>();
+            anim.SetTrigger("Confirm");
+        }
+
+        public void ExitWindow()
+        {
+            _exitWindow.SetActive(true);
+        }
+
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
+
+        public void BackMenu()
+        {
+            Animator anim = _exitWindow.GetComponent<Animator>();
+            anim.SetTrigger("Back");
         }
     }
 }

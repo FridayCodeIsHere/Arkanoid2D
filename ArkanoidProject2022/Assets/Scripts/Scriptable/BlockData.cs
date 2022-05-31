@@ -11,12 +11,14 @@ namespace ArkanoidProj {
         [SerializeField] private Color _dropColor;
         [SerializeField] private int _score;
         [SerializeField] private Sprite _crystal;
+        [SerializeField] private Gradient _colorGradient;
 
         public GameObject Block => _block;
         public List<Sprite> Sprites => _sprites;
         public Color DropColor => _dropColor;
         public int Score => _score;
         public Sprite Crystal => _crystal;
+        public Gradient ColorGradient => _colorGradient;
 
     }
 }

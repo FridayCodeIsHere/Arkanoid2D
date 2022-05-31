@@ -24,8 +24,9 @@ namespace ArkanoidProj
 
         public void Play()
         {
+            Animator anim = _pauseGameWindow.GetComponent<Animator>();
+            anim.SetTrigger("HidePause");
             _gameState.SetState(State.Gameplay);
-            _pauseGameWindow.SetActive(false);
         }
 
         public void Replay()
@@ -48,10 +49,7 @@ namespace ArkanoidProj
             loader.LoadingMainScene(true);
         }
 
-        public void SettingsMenu()
-        {
 
-        }
 
         private void DisableWindows()
         {
@@ -66,7 +64,6 @@ namespace ArkanoidProj
             {
                 _gameState.SetState(State.StopGame);
                 _victoryWindow.SetActive(true);
-                Debug.Log("EndGame");
             }
         }
     }

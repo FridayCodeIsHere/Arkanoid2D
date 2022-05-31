@@ -75,7 +75,7 @@ namespace ArkanoidProj
                 if (_hasCrystal)
                 {
                     Crystal crystal = Instantiate(_crystal, transform.position, Quaternion.identity, transform.root);
-                    crystal.SetSprite(_blockData.Crystal);
+                    crystal.SetData(_blockData.Crystal, _blockData.ColorGradient);
                     crystal.DropDown();
                 }
                 Invoke(nameof(Dead), 0.5f);

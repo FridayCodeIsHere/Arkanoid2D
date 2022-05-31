@@ -7,12 +7,19 @@ namespace ArkanoidProj
     {
         public void Clear()
         {
-            DeleteObjectsOfType<Block>();
-            DeleteObjectsOfType<BallMovement>();
-            DeleteObjectsOfType<Crystal>();
+            DeleteObjectsOfTypeEditor<Block>();
+            DeleteObjectsOfTypeEditor<BallMovement>();
+            DeleteObjectsOfTypeEditor<Crystal>();
         }
 
-        private void DeleteObjectsOfType<T>() where T : UnityEngine.Component
+        public void ClearLevelItems()
+        {
+            DeleteObjectsOfTypeGame<Block>();
+            DeleteObjectsOfTypeGame<BallMovement>();
+            DeleteObjectsOfTypeGame<Crystal>();
+        }
+
+        private void DeleteObjectsOfTypeEditor<T>() where T : UnityEngine.Component
         {
             T[] items = FindObjectsOfType<T>();
 
@@ -20,7 +27,20 @@ namespace ArkanoidProj
             {
                 foreach(T item in items)
                 {
-                    DestroyItem(item.gameObject);
+                    DestroyImmediate(item.gameObject);
+                }
+            }
+        }
+
+        private void DeleteObjectsOfTypeGame<T>() where T : UnityEngine.Component
+        {
+            T[] items = FindObjectsOfType<T>();
+
+            if (items.Length > 0)
+            {
+                foreach (T item in items)
+                {
+                    Destroy(item.gameObject);
                 }
             }
         }
@@ -28,7 +48,8 @@ namespace ArkanoidProj
         private void DestroyItem(GameObject item)
         {
 #if UNITY_EDITOR
-            DestroyImmediate(item.gameObject);
+            Debug.Log("Editor working");
+            
 #else
             Destroy(item.gameObject);
 #endif

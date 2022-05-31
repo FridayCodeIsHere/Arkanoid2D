@@ -6,6 +6,7 @@ namespace ArkanoidProj
     [RequireComponent(typeof(SpriteRenderer))]
     public class Crystal : MonoBehaviour
     {
+        [SerializeField] private TrailRenderer _lineEffect;
         private Rigidbody2D _rigidbody;
         private const float Speed = 5f;
         private bool _canDrop = false;
@@ -15,9 +16,10 @@ namespace ArkanoidProj
         {
             _rigidbody = GetComponent<Rigidbody2D>();
         }
-        public void SetSprite(Sprite sprite)
+        public void SetData(Sprite sprite, Gradient colorGradient)
         {
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            _lineEffect.colorGradient = colorGradient;
             spriteRenderer.sprite = sprite;
         }
 
