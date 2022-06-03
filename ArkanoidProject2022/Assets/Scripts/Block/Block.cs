@@ -37,7 +37,7 @@ namespace ArkanoidProj
         private void OnDisable()
         {
             _count--;
-            OnDestroyed?.Invoke(_score);
+            //OnDestroyed?.Invoke(_score);
             if (_count < 1)
             {
                 OnEnded?.Invoke();

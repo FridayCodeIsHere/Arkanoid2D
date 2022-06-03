@@ -11,7 +11,6 @@ namespace ArkanoidProj
 
         public void ButtonAction()
         {
-            Debug.Log("Button work");
             OnButtonAction?.Invoke();
         }
     }

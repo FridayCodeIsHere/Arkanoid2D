@@ -92,6 +92,8 @@ GameObject:
   - component: {fileID: 3634575662306016537}
   - component: {fileID: 3634575662306016998}
   - component: {fileID: 3221914373660411127}
+  - component: {fileID: 5765253679521406402}
+  - component: {fileID: 1718687617668812684}
   m_Layer: 5
   m_Name: LevelButton
   m_TagString: Untagged
@@ -176,7 +178,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -200,19 +202,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3634575662306016537}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3221914373660411127}
-        m_TargetAssemblyTypeName: ArkanoidProj.LevelButton, Assembly-CSharp
-        m_MethodName: LevelSelected
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3221914373660411127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,3 +217,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _buttonText: {fileID: 3634575662243110820}
   _button: {fileID: 3634575662306016998}
+--- !u!95 &5765253679521406402
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3634575662306016996}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d00110d0a18ff64e9d121b0cedfd5dd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1718687617668812684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3634575662306016996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 591b8eb336cb8944d94db8dbae7c3d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnButtonAction:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3221914373660411127}
+        m_TargetAssemblyTypeName: ArkanoidProj.LevelButton, Assembly-CSharp
+        m_MethodName: LevelSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

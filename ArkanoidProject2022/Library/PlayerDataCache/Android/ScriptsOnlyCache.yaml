@@ -1,9 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp-Editor.dll:
-    - ArkanoidProj.EditorData
     - ArkanoidProj.LevelEditor
-    - ArkanoidProj.SceneEditor
     Assembly-CSharp.dll:
     - ArkanoidProj.AudioButton
     - ArkanoidProj.BallCollision
@@ -13,11 +11,13 @@ ScriptsOnlyBuild:
     - ArkanoidProj.Block
     - ArkanoidProj.BlockComposite
     - ArkanoidProj.BlockData
+    - ArkanoidProj.ButtonEvent
     - ArkanoidProj.ButtonsGenerator
     - ArkanoidProj.CalculationLevelProgress
     - ArkanoidProj.CameraSize
     - ArkanoidProj.ClearLevel
     - ArkanoidProj.Crystal
+    - ArkanoidProj.CrystalImage
     - ArkanoidProj.GameLevel
     - ArkanoidProj.GameState
     - ArkanoidProj.IntToText
@@ -39,6 +39,7 @@ ScriptsOnlyBuild:
     - ArkanoidProj.WindowController
     - ArkanoidProj.WindowEndGame
     - ArkanoidProj.WindowEvent
+    - Deactivator
     - LevelsContent
     - UIColliderSetter
     Unity.2D.Animation.Editor.dll:
@@ -48,6 +49,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -58,15 +60,15 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
-    Unity.DeviceSimulator.Editor.dll:
-    - UnityEditor.DeviceSimulation.DeviceInfoAsset
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -127,69 +129,79 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1462}
     - Class: 114
-      Script: {instanceID: 1516}
+      Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1548}
+      Script: {instanceID: 1518}
     - Class: 114
-      Script: {instanceID: 1676}
+      Script: {instanceID: 1550}
     - Class: 114
-      Script: {instanceID: 1900}
+      Script: {instanceID: 1576}
     - Class: 114
-      Script: {instanceID: 2302}
+      Script: {instanceID: 1678}
     - Class: 114
-      Script: {instanceID: 2500}
+      Script: {instanceID: 1902}
     - Class: 114
-      Script: {instanceID: 2614}
+      Script: {instanceID: 2012}
     - Class: 114
-      Script: {instanceID: 2732}
+      Script: {instanceID: 2306}
     - Class: 114
-      Script: {instanceID: 2844}
+      Script: {instanceID: 2484}
     - Class: 114
-      Script: {instanceID: 2906}
+      Script: {instanceID: 2504}
     - Class: 114
-      Script: {instanceID: 3152}
+      Script: {instanceID: 2618}
     - Class: 114
-      Script: {instanceID: 3406}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 3414}
+      Script: {instanceID: 2848}
     - Class: 114
-      Script: {instanceID: 3532}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 3568}
+      Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3796}
+      Script: {instanceID: 3410}
     - Class: 114
-      Script: {instanceID: 3900}
+      Script: {instanceID: 3418}
     - Class: 114
-      Script: {instanceID: 4162}
+      Script: {instanceID: 3570}
     - Class: 114
-      Script: {instanceID: 4298}
+      Script: {instanceID: 3774}
     - Class: 114
-      Script: {instanceID: 4654}
+      Script: {instanceID: 3800}
     - Class: 114
-      Script: {instanceID: 4978}
+      Script: {instanceID: 3904}
     - Class: 114
-      Script: {instanceID: 5272}
+      Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 5284}
+      Script: {instanceID: 4168}
     - Class: 114
-      Script: {instanceID: 5550}
+      Script: {instanceID: 4304}
     - Class: 114
-      Script: {instanceID: 5636}
+      Script: {instanceID: 4660}
     - Class: 114
-      Script: {instanceID: 5746}
+      Script: {instanceID: 4984}
     - Class: 114
-      Script: {instanceID: 5796}
+      Script: {instanceID: 5278}
     - Class: 114
-      Script: {instanceID: 5846}
+      Script: {instanceID: 5290}
     - Class: 114
-      Script: {instanceID: 5854}
+      Script: {instanceID: 5556}
     - Class: 114
-      Script: {instanceID: 5866}
+      Script: {instanceID: 5642}
     - Class: 114
-      Script: {instanceID: 5932}
+      Script: {instanceID: 5752}
     - Class: 114
-      Script: {instanceID: 6018}
+      Script: {instanceID: 5802}
+    - Class: 114
+      Script: {instanceID: 5852}
+    - Class: 114
+      Script: {instanceID: 5860}
+    - Class: 114
+      Script: {instanceID: 5872}
+    - Class: 114
+      Script: {instanceID: 5938}
+    - Class: 114
+      Script: {instanceID: 6024}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -235,7 +247,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 96
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -244,49 +264,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1462}
     - Class: 114
-      Script: {instanceID: 1574}
+      Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1650}
+      Script: {instanceID: 1576}
     - Class: 114
-      Script: {instanceID: 2306}
+      Script: {instanceID: 1652}
     - Class: 114
-      Script: {instanceID: 2480}
+      Script: {instanceID: 2012}
     - Class: 114
-      Script: {instanceID: 2614}
+      Script: {instanceID: 2310}
     - Class: 114
-      Script: {instanceID: 2732}
+      Script: {instanceID: 2484}
     - Class: 114
-      Script: {instanceID: 2906}
+      Script: {instanceID: 2618}
     - Class: 114
-      Script: {instanceID: 2956}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 3152}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 3226}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 3414}
+      Script: {instanceID: 3156}
     - Class: 114
-      Script: {instanceID: 3532}
+      Script: {instanceID: 3230}
     - Class: 114
-      Script: {instanceID: 3568}
+      Script: {instanceID: 3418}
     - Class: 114
-      Script: {instanceID: 3580}
+      Script: {instanceID: 3570}
     - Class: 114
-      Script: {instanceID: 3770}
+      Script: {instanceID: 3582}
     - Class: 114
-      Script: {instanceID: 3922}
+      Script: {instanceID: 3772}
     - Class: 114
-      Script: {instanceID: 4622}
+      Script: {instanceID: 3926}
     - Class: 114
-      Script: {instanceID: 4654}
+      Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 4836}
+      Script: {instanceID: 4628}
     - Class: 114
-      Script: {instanceID: 5690}
+      Script: {instanceID: 4660}
     - Class: 114
-      Script: {instanceID: 5866}
+      Script: {instanceID: 4842}
     - Class: 114
-      Script: {instanceID: 5910}
+      Script: {instanceID: 5696}
+    - Class: 114
+      Script: {instanceID: 5872}
+    - Class: 114
+      Script: {instanceID: 5916}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -312,6 +336,12 @@ ScriptsOnlyBuild:
     - Class: 687078895
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 69415240821be7986b27e72bf9609a30
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
@@ -432,6 +462,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: PlatformLife
+  - hash:
+      serializedVersion: 2
+      Hash: db41013288ecadc936282228aea36dc0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: ButtonEvent
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -650,25 +686,19 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: 69415240821be7986b27e72bf9609a30
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: 349d08daa6108b9a28f8c38fd40ce96f
     assemblyName: Unity.2D.SpriteShape.Runtime.dll
     namespaceName: UnityEngine.U2D
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 43deaddd1ce3d155ad4b24fd7645c4f6
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: Crystal
   - hash:
       serializedVersion: 2
-      Hash: fb500a25e51b937fce488b1444888b40
+      Hash: ca0e701a6fe2c13d103bfc0aa10f2159
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: MenuWindowSystem
@@ -684,6 +714,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ContentSizeFitter
+  - hash:
+      serializedVersion: 2
+      Hash: ad747fce307a78ce171548f423f8cbe8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: CrystalImage
   - hash:
       serializedVersion: 2
       Hash: 3cf156985df62fac63708d6bed3583bf
@@ -710,7 +746,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: b4740e6d8ca2480a7dd80831ec79c9a1
+      Hash: e57ad8b6fdad30238e7cbeb7b6f17dbc
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: BlockData
@@ -732,6 +768,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Deactivator
   - hash:
       serializedVersion: 2
       Hash: d69abcde6cbb4e806c8461e54c65978b

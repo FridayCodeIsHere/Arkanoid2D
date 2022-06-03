@@ -35,7 +35,6 @@ namespace ArkanoidProj
                 _lineEffect.SetActive(true);
                 _lastPositionX = transform.position.x;
                 _isActive = true;
-                Debug.Log($"IsActive: {_isActive}");
                 transform.SetParent(null);
                 _rigidbody.bodyType = RigidbodyType2D.Dynamic;
                 AddForce(0, -1); //fall down at the start

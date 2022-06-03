@@ -38,9 +38,6 @@ namespace ArkanoidProj {
                 case TypeOfLevel.LightRed:
                     path = "Light-RedLevels";
                     break;
-                default:
-                    Debug.LogWarning("Can't find path");
-                    break;
             }
             return path;
         }

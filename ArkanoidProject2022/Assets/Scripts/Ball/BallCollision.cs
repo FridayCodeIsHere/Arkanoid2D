@@ -38,7 +38,7 @@ namespace ArkanoidProj
             {
                 if (currentPosition.y < _lastPosition.y + 0.35f && currentPosition.y > _lastPosition.y - 0.35f)
                 {
-                    Debug.Log("The same Y position");
+                    //Debug.Log("The same Y position");
                     //Change direction of the ball here
                 }
             }

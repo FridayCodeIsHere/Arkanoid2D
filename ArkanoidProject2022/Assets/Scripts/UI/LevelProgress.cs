@@ -48,6 +48,7 @@ namespace ArkanoidProj
         {
             if (_gameState.State == State.Gameplay)
             {
+                Debug.Log("Update Crystals");
                 _crystal++;
                 _UpdateCrystal.Invoke(_crystal);
             }
