@@ -9,7 +9,7 @@ namespace ArkanoidProj
         [SerializeField] private AudioButton _sound;
         [SerializeField] private AudioButton _music;
 
-        private void OnEnable()
+        private void Start()
         {
             _music.SetState(true);
             _sound.SetState(true);

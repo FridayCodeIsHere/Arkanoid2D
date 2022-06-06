@@ -6,9 +6,11 @@ namespace ArkanoidProj
 {
     public class MenuWindowSystem : MonoBehaviour
     {
-        [SerializeField] private GameObject _settingsMenu;
+        [SerializeField] private Animator _settingsMenu;
         [SerializeField] private GameObject _panelLevels;
         [SerializeField] private GameObject _levels;
+        [SerializeField] private Animator _storyWindow;
+        [SerializeField] private Animator _developersWindow;
         [SerializeField] private GameObject _exitWindow;
         [SerializeField] private LevelsContent _content;
 
@@ -37,15 +39,9 @@ namespace ArkanoidProj
 
         }
 
-        public void SettingsMenu()
-        {
-            _settingsMenu.SetActive(true);
-        }
-
         public void HideSettingsMenu()
         {
-            Animator anim = _settingsMenu.GetComponent<Animator>();
-            anim.SetTrigger("Confirm");
+            _settingsMenu.SetTrigger("Close");
         }
 
         public void ExitWindow()
@@ -60,8 +56,20 @@ namespace ArkanoidProj
 
         public void BackMenu()
         {
-            Animator anim = _exitWindow.GetComponent<Animator>();
-            anim.SetTrigger("Back");
+            if (_exitWindow.TryGetComponent(out Animator animator))
+            {
+                animator.SetTrigger("Close");
+            }
+        }
+
+        public void HideStoryWindow()
+        {
+            _storyWindow.SetTrigger("Close");
+        }
+
+        public void HideDevelopersInfo()
+        {
+            _developersWindow.SetTrigger("Close");
         }
     }
 }

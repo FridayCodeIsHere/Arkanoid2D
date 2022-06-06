@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Keys>
+	<Key Name="Test">
+		<Translates>
+		    <en>en</en>
+		    <cz>cz</cz>
+		    <ua>ua</ua>
+		    <pl>pl</pl>
+	    </Translates>
+	</Key>
+	<Key Name="Test2">
+	    <Translates>
+	        <en>en</en>
+	        <cz>cz</cz>
+	        <ua>ua</ua>
+	        <pl>pl</pl>
+	    </Translates>
+	</Key>
+</Keys>
