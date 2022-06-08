@@ -1,19 +1,163 @@
 <?xml version="1.0"?>
 <Keys>
-	<Key Name="Test">
+	<Key Name="SettingsHeader_Key">
 		<Translates>
-		    <en>en</en>
-		    <cz>cz</cz>
-		    <ua>ua</ua>
-		    <pl>pl</pl>
+		    <en>SETTINGS</en>
+		    <cz>NASTAVENÍ</cz>
+		    <ua>НАСТРОЙКИ</ua>
+		    <pl>USTAWIENIA</pl>
 	    </Translates>
 	</Key>
-	<Key Name="Test2">
+	<Key Name="Sound_Key">
 	    <Translates>
-	        <en>en</en>
-	        <cz>cz</cz>
-	        <ua>ua</ua>
-	        <pl>pl</pl>
+	        <en>SOUND:</en>
+	        <cz>ZVUK:</cz>
+	        <ua>ЗВУК:</ua>
+	        <pl>DŹWIĘK:</pl>
 	    </Translates>
 	</Key>
+	<Key Name="Music_Key">
+	    <Translates>
+	        <en>MUSIC:</en>
+	        <cz>HUDBA:</cz>
+	        <ua>МУЗИКА:</ua>
+	        <pl>MUZYKA:</pl>
+	    </Translates>
+	</Key>
+	<Key Name="Language_Key">
+	    <Translates>
+	        <en>LANGUAGE:</en>
+	        <cz>JAZYK:</cz>
+	        <ua>Мова:</ua>
+	        <pl>JĘZYK:</pl>
+	    </Translates>
+	</Key>
+	<Key Name="Score_Key">
+    <Translates>
+	        <en>SCORE:</en>
+	        <cz>SKÓRE:</cz>
+	        <ua>РЕЗУЛЬТАТ:</ua>
+	        <pl>WYNIK:</pl>
+	    </Translates>
+	</Key>
+	<Key Name="Exit_Key">
+    <Translates>
+	        <en>EXIT</en>
+	        <cz>VÝCHOD</cz>
+	        <ua>ВИХІД</ua>
+	        <pl>WYJŚCIE</pl>
+	    </Translates>
+	</Key>
+	<Key Name="ExitDescription_Key">
+    <Translates>
+	        <en>Are you sure want to  quit game ?</en>
+	        <cz>Opravdu chcete ukončit hru?</cz>
+	        <ua>Ви дійсно хочите покинути гру?</ua>
+	        <pl>Czy na pewno chcesz wyjść z gry?</pl>
+	    </Translates>
+	</Key>
+	<Key Name="Story_Key">
+    <Translates>
+	        <en>STORY</en>
+	        <cz>PŘÍBĚH</cz>
+	        <ua>ІСТОРІЯ</ua>
+	        <pl>FABUŁA</pl>
+	    </Translates>
+	</Key>
+	<Key Name="StoryDescription_Key">
+    <Translates>
+	        <en>Revive the mythical figure of the Golem. Created in the 16th century by Jewish Rabbi Low in Prague.
+
+With the help of 3 balls you have to destroy blocks in 48 rooms, where 4 elements are represented.
+
+Only the will you uncover the ancient secret and get the "shem" that will enliven the Golem.</en>
+	        <cz>Oživte mýtickou postavu Golema. Vytvořil v 16. století židovský rabín Low v Praze.
+
+Pomocí 3 kuliček musíte zničit bloky ve 48 místnostech, kde jsou zastoupeny 4 prvky.
+
+Jedině tak odhalíte prastaré tajemství a získáte „šem“, který Golema oživí.</cz>
+	        <ua>Відтворіть міфічну фігуру Голема. Створений у 16 столітті єврейським рабином Лоу в Празі.
+
+За допомогою 3-х куль вам належить знищити блоки в 48 кімнатах, де представлені 4 елементи.
+
+Тільки так ви розкриєте стародавню таємницю і отримаєте «шем», який оживить Голема.</ua>
+	        <pl>Ożyw mityczną postać Golema. Utworzony w XVI wieku przez żydowskiego rabina Lowa w Pradze.
+
+Za pomocą 3 kul musisz zniszczyć klocki w 48 pokojach, w których reprezentowane są 4 elementy.
+
+Tylko wtedy odkryjesz starożytną tajemnicę i zdobędziesz „shem”, który ożywi Golema.</pl>
+	    </Translates>
+	</Key>
+	<Key Name="Authors_Key">
+    <Translates>
+	        <en>AUTHORS</en>
+	        <cz>AUTOŘI</cz>
+	        <ua>Автори</ua>
+	        <pl>AUTORSKI</pl>
+	    </Translates>
+	</Key>
+	<Key Name="CreateBy_Key">
+    <Translates>
+      <en>Create by</en>
+      <cz>Vytvořeno</cz>
+      <ua>Виготовлено</ua>
+      <pl>Utwórz przez</pl>
+    </Translates>
+	</Key>
+	<Key Name="Development_Key">
+    <Translates>
+	        <en>Development:</en>
+	        <cz>Vývoj:</cz>
+	        <ua>Розробка:</ua>
+	        <pl>Rozwój:</pl>
+	    </Translates>
+	</Key>
+	<Key Name="GraphicsDesign_Key">
+    <Translates>
+	        <en>Graphics and design:</en>
+	        <cz>Grafika a design:</cz>
+	        <ua>Графіка та дизайн</ua>
+	        <pl>Grafika i projekt:</pl>
+	    </Translates>
+	</Key>
+	<Key Name="MusicSound_Key">
+    <Translates>
+	        <en>Music and Sound:</en>
+	        <cz>Hudba a zvuk:</cz>
+	        <ua>Музика та звук:</ua>
+	        <pl>Muzyka i dźwięk:</pl>
+	    </Translates>
+	</Key>
+	<Key Name="Pause_Key">
+    <Translates>
+	        <en>PAUSE</en>
+	        <cz>PAUZA</cz>
+	        <ua>ПАУЗА</ua>
+	        <pl>PAUZA</pl>
+	    </Translates>
+	</Key>
+	<Key Name="Victory_Key">
+    <Translates>
+	        <en>VICTORY</en>
+	        <cz>VÝHRA</cz>
+	        <ua>ПЕРЕМОГА</ua>
+	        <pl>WIKTORIA</pl>
+	    </Translates>
+	</Key>
+  <Key Name="Crystal_key">
+    <Translates>
+      <en>CRYSTALS:</en>
+      <cz>KRYSTALŮ:</cz>
+      <ua>КРИСТАЛИ</ua>
+      <pl>CRYSTALS</pl>
+    </Translates>
+  </Key>
+  <Key Name="GameOver_key">
+    <Translates>
+      <en>GAME OVER</en>
+      <cz>PROHRA</cz>
+      <ua>ПОРАЗКА</ua>
+      <pl>KONIEC GRY</pl>
+    </Translates>
+  </Key>
 </Keys>

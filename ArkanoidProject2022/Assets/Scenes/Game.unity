@@ -1761,6 +1761,7 @@ GameObject:
   - component: {fileID: 491492710}
   - component: {fileID: 491492712}
   - component: {fileID: 491492711}
+  - component: {fileID: 491492713}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -1820,7 +1821,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Score:'
+  m_Text: Score_Key
 --- !u!222 &491492712
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1829,6 +1830,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491492709}
   m_CullTransparentMesh: 1
+--- !u!114 &491492713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491492709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408bdf62913c249428779bf6997088c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &492643745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3143,6 +3156,7 @@ GameObject:
   - component: {fileID: 766061761}
   - component: {fileID: 766061763}
   - component: {fileID: 766061762}
+  - component: {fileID: 766061764}
   m_Layer: 5
   m_Name: VitoryText
   m_TagString: Untagged
@@ -3202,7 +3216,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "V\xDDHRA"
+  m_Text: Victory_Key
 --- !u!222 &766061763
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3211,6 +3225,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766061760}
   m_CullTransparentMesh: 1
+--- !u!114 &766061764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766061760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408bdf62913c249428779bf6997088c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &773005461
 GameObject:
   m_ObjectHideFlags: 0
@@ -5522,6 +5548,7 @@ GameObject:
   - component: {fileID: 1291750820}
   - component: {fileID: 1291750822}
   - component: {fileID: 1291750821}
+  - component: {fileID: 1291750823}
   m_Layer: 5
   m_Name: CrystalText
   m_TagString: Untagged
@@ -5581,7 +5608,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "KRYSTAL\u016E:"
+  m_Text: Crystal_key
 --- !u!222 &1291750822
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5590,6 +5617,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291750819}
   m_CullTransparentMesh: 1
+--- !u!114 &1291750823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291750819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408bdf62913c249428779bf6997088c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &1332266349 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 2775941349265018622, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
@@ -5606,6 +5645,7 @@ GameObject:
   - component: {fileID: 1335223238}
   - component: {fileID: 1335223240}
   - component: {fileID: 1335223239}
+  - component: {fileID: 1335223241}
   m_Layer: 5
   m_Name: VitoryText
   m_TagString: Untagged
@@ -5665,7 +5705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PROHRA
+  m_Text: GameOver_key
 --- !u!222 &1335223240
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5674,6 +5714,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335223237}
   m_CullTransparentMesh: 1
+--- !u!114 &1335223241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335223237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408bdf62913c249428779bf6997088c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1368636729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6134,6 +6186,7 @@ GameObject:
   - component: {fileID: 1414689001}
   - component: {fileID: 1414689003}
   - component: {fileID: 1414689002}
+  - component: {fileID: 1414689004}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -6157,8 +6210,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: 229.03165}
-  m_SizeDelta: {x: 235.0205, y: 76.9135}
+  m_AnchoredPosition: {x: 1.1545, y: 229.03165}
+  m_SizeDelta: {x: 662.1895, y: 76.9135}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1414689002
 MonoBehaviour:
@@ -6193,7 +6246,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Score:'
+  m_Text: Score_Key
 --- !u!222 &1414689003
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6202,6 +6255,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414689000}
   m_CullTransparentMesh: 1
+--- !u!114 &1414689004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414689000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408bdf62913c249428779bf6997088c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1435203365 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3774772097009397687, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
@@ -6743,6 +6808,7 @@ GameObject:
   - component: {fileID: 1636392770}
   - component: {fileID: 1636392772}
   - component: {fileID: 1636392771}
+  - component: {fileID: 1636392773}
   m_Layer: 5
   m_Name: PauseText
   m_TagString: Untagged
@@ -6802,7 +6868,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pause
+  m_Text: Pause_Key
 --- !u!222 &1636392772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6811,6 +6877,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636392769}
   m_CullTransparentMesh: 1
+--- !u!114 &1636392773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636392769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408bdf62913c249428779bf6997088c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &1677983901 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 2775941349265018622, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
@@ -7096,6 +7174,7 @@ GameObject:
   - component: {fileID: 1793898282}
   - component: {fileID: 1793898284}
   - component: {fileID: 1793898283}
+  - component: {fileID: 1793898285}
   m_Layer: 5
   m_Name: CrystalText
   m_TagString: Untagged
@@ -7155,7 +7234,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "KRYSTAL\u016E:\n"
+  m_Text: Crystal_key
 --- !u!222 &1793898284
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7164,6 +7243,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793898281}
   m_CullTransparentMesh: 1
+--- !u!114 &1793898285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793898281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408bdf62913c249428779bf6997088c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1828102445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3774772097009397687, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}

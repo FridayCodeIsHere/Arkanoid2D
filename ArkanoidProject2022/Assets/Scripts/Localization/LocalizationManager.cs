@@ -6,8 +6,11 @@ namespace ArkanoidProj
 {
     public class LocalizationManager : MonoBehaviour
     {
-        public static int SelectedLanguage { get; private set; }
+        public static int SelectedLanguage { get; private set; } = 0;
         private static Dictionary<string, List<string>> _localization;
+
+        public delegate void LanguageChangeHandler();
+        public static event LanguageChangeHandler OnLanguageChange;
 
         [SerializeField] private TextAsset _textFile;
 
@@ -22,6 +25,7 @@ namespace ArkanoidProj
         public void SetLanguage(int id)
         {
             SelectedLanguage = id;
+            OnLanguageChange?.Invoke();
         }
 
         private void LoadLocalization()
