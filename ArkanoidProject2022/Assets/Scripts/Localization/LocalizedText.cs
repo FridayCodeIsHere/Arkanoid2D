@@ -43,6 +43,9 @@ namespace ArkanoidProj
                 _key = newKey;
             }
             _text.text = LocalizationManager.GetTranslate(_key);
+            Debug.Log(LocalizationManager.Instance.GetFont());
+            _text.font = LocalizationManager.Instance.GetFont();
+            
         }
 
     }

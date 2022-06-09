@@ -4,6 +4,7 @@ using System.Xml;
 
 namespace ArkanoidProj
 {
+
     public class LocalizationManager : MonoBehaviour
     {
         public static int SelectedLanguage { get; private set; } = 0;
@@ -12,14 +13,28 @@ namespace ArkanoidProj
         public delegate void LanguageChangeHandler();
         public static event LanguageChangeHandler OnLanguageChange;
 
+        public static LocalizationManager Instance;
+
         [SerializeField] private TextAsset _textFile;
+
+        [SerializeField] private List<Font> _fonts;
 
         private void Awake()
         {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+
             if (_localization == null)
             {
                 LoadLocalization();
             }
+        }
+
+        private void OnDestroy()
+        {
+            Debug.Log("Localization destroy");
         }
 
         public void SetLanguage(int id)
@@ -59,7 +74,17 @@ namespace ArkanoidProj
             {
                 return _localization[key][languageId];
             }
+
             return key;
+        }
+
+        public Font GetFont(int languageId = -1)
+        {
+            if (languageId == -1)
+            {
+                languageId = SelectedLanguage;
+            }
+            return _fonts[languageId];
         }
     }
 }

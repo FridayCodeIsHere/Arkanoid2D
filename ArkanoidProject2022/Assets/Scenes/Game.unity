@@ -1810,10 +1810,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 48
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 4
     m_MaxSize: 130
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -3205,7 +3205,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e24bfce8e8c39cf4eb4c2891ac4c340b, type: 3}
-    m_FontSize: 100
+    m_FontSize: 82
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -4146,6 +4146,7 @@ GameObject:
   - component: {fileID: 1044365389}
   - component: {fileID: 1044365391}
   - component: {fileID: 1044365390}
+  - component: {fileID: 1044365392}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4338,6 +4339,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformLife: {fileID: 1255104539}
   _levelProgress: {fileID: 1044365390}
+--- !u!114 &1044365392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044365385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400ce762c9eaf104b9207a1cca724d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textFile: {fileID: 4900000, guid: 9e96672eb72886b4b8b1329ae16ef9cd, type: 3}
+  _fonts:
+  - {fileID: 12800000, guid: e24bfce8e8c39cf4eb4c2891ac4c340b, type: 3}
+  - {fileID: 12800000, guid: d50448b045ef64647a47844fa04033c1, type: 3}
+  - {fileID: 12800000, guid: 41f290253da549849b9dfc127f9ad79a, type: 3}
+  - {fileID: 12800000, guid: c0fab24c2bd645f4f8b005a5d9765b43, type: 3}
 --- !u!61 &1044712278 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 2775941349265018622, guid: 95d7d696bb203164c91019f5b9ab1e21, type: 3}
@@ -5597,10 +5616,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 58
+    m_FontSize: 48
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 130
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -6235,10 +6254,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 48
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 4
     m_MaxSize: 130
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -6857,7 +6876,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e24bfce8e8c39cf4eb4c2891ac4c340b, type: 3}
-    m_FontSize: 110
+    m_FontSize: 82
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 7
@@ -7223,7 +7242,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 48
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -7231,8 +7250,8 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Crystal_key
 --- !u!222 &1793898284

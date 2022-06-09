@@ -10,6 +10,7 @@ namespace ArkanoidProj
         private Rigidbody2D _rigidbody;
         private const float Speed = 5f;
         private bool _canDrop = false;
+        private bool _isCollision = false;
         public static event Action OnCollision;
 
         private void Awake()
@@ -42,15 +43,18 @@ namespace ArkanoidProj
             PlatformMovement platform = collision.gameObject.GetComponent<PlatformMovement>();
             LostZone lostZone = collision.gameObject.GetComponent<LostZone>();
 
-            if (platform)
+            if (platform && !_isCollision)
             {
                 OnCollision?.Invoke();
                 Destroy(this.gameObject);
+                _isCollision = true;
             }
             else if (lostZone)
             {
                 Destroy(this.gameObject);
             }
+
+
         }
     }
 }
