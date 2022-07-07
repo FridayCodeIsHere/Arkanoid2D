@@ -153,7 +153,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.ArkanoidProject2022
+    Android: com.WOLFDOGGAMES.Golemoresurrection
   buildNumber:
     Standalone: 0
     iPhone: 0

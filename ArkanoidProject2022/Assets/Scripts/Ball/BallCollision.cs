@@ -4,20 +4,23 @@ using UnityEngine;
 
 namespace ArkanoidProj
 {
-    [RequireComponent(typeof(BallMovement))]
+    [RequireComponent(typeof(BallMovement), typeof(BallSound))]
     public class BallCollision : MonoBehaviour
     {
         private BallMovement _ballMovement;
         private Vector2 _lastPosition;
+        private BallSound _ballSound;
         private float _lastDirection;
 
         private void Awake()
         {
             _ballMovement = GetComponent<BallMovement>();
+            _ballSound = GetComponent<BallSound>();
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            _ballSound.PlaySoundCollision();
             Vector2 currentPosition = transform.position;
             PlatformMovement platformMove = collision.gameObject.GetComponent<PlatformMovement>();
 

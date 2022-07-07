@@ -29,7 +29,6 @@ namespace ArkanoidProj
         {
             _text = GetComponent<Text>();
             _key = _text.text;
-            Debug.Log(_key);
         }
 
         public void Localize(string newKey = null)
@@ -43,7 +42,6 @@ namespace ArkanoidProj
                 _key = newKey;
             }
             _text.text = LocalizationManager.GetTranslate(_key);
-            Debug.Log(LocalizationManager.Instance.GetFont());
             _text.font = LocalizationManager.Instance.GetFont();
             
         }

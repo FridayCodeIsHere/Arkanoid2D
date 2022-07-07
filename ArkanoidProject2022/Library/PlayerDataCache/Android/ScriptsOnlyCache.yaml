@@ -4,10 +4,12 @@ ScriptsOnlyBuild:
     - ArkanoidProj.LevelEditor
     Assembly-CSharp.dll:
     - ArkanoidProj.AudioButton
+    - ArkanoidProj.AudioController
     - ArkanoidProj.BallCollision
     - ArkanoidProj.BallCount
     - ArkanoidProj.BallCreator
     - ArkanoidProj.BallMovement
+    - ArkanoidProj.BallSound
     - ArkanoidProj.Block
     - ArkanoidProj.BlockComposite
     - ArkanoidProj.BlockData
@@ -27,6 +29,7 @@ ScriptsOnlyBuild:
     - ArkanoidProj.LevelProgress
     - ArkanoidProj.LoadingScreen
     - ArkanoidProj.LocalizationManager
+    - ArkanoidProj.LocalizedText
     - ArkanoidProj.LostZone
     - ArkanoidProj.MenuWindowSystem
     - ArkanoidProj.PanelLevels
@@ -38,6 +41,9 @@ ScriptsOnlyBuild:
     - ArkanoidProj.SaveArea
     - ArkanoidProj.SettingsWindow
     - ArkanoidProj.TopCollider
+    - ArkanoidProj.TriggerAction
+    - ArkanoidProj.UserProgress
+    - ArkanoidProj.UserScoreText
     - ArkanoidProj.WindowController
     - ArkanoidProj.WindowEndGame
     - ArkanoidProj.WindowEvent
@@ -51,6 +57,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintPaletteClipboard
     - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
@@ -103,6 +110,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
     - Class: 58
@@ -118,6 +127,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -148,63 +161,71 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2326}
     - Class: 114
+      Script: {instanceID: 2436}
+    - Class: 114
       Script: {instanceID: 2506}
     - Class: 114
       Script: {instanceID: 2526}
     - Class: 114
-      Script: {instanceID: 2640}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2758}
+      Script: {instanceID: 2756}
     - Class: 114
-      Script: {instanceID: 2870}
+      Script: {instanceID: 2868}
     - Class: 114
-      Script: {instanceID: 2932}
+      Script: {instanceID: 2930}
     - Class: 114
-      Script: {instanceID: 3178}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3432}
+      Script: {instanceID: 3180}
     - Class: 114
-      Script: {instanceID: 3440}
+      Script: {instanceID: 3434}
     - Class: 114
-      Script: {instanceID: 3592}
+      Script: {instanceID: 3442}
     - Class: 114
-      Script: {instanceID: 3796}
+      Script: {instanceID: 3594}
     - Class: 114
-      Script: {instanceID: 3822}
+      Script: {instanceID: 3798}
     - Class: 114
-      Script: {instanceID: 3926}
+      Script: {instanceID: 3824}
     - Class: 114
-      Script: {instanceID: 4132}
+      Script: {instanceID: 3928}
     - Class: 114
-      Script: {instanceID: 4190}
+      Script: {instanceID: 4136}
     - Class: 114
-      Script: {instanceID: 4326}
+      Script: {instanceID: 4194}
     - Class: 114
-      Script: {instanceID: 4682}
+      Script: {instanceID: 4330}
     - Class: 114
-      Script: {instanceID: 5006}
+      Script: {instanceID: 4686}
     - Class: 114
-      Script: {instanceID: 5300}
+      Script: {instanceID: 5010}
     - Class: 114
-      Script: {instanceID: 5312}
+      Script: {instanceID: 5304}
     - Class: 114
-      Script: {instanceID: 5578}
+      Script: {instanceID: 5316}
     - Class: 114
-      Script: {instanceID: 5664}
+      Script: {instanceID: 5582}
     - Class: 114
-      Script: {instanceID: 5774}
+      Script: {instanceID: 5668}
     - Class: 114
-      Script: {instanceID: 5824}
+      Script: {instanceID: 5778}
     - Class: 114
-      Script: {instanceID: 5874}
+      Script: {instanceID: 5828}
     - Class: 114
-      Script: {instanceID: 5882}
+      Script: {instanceID: 5878}
     - Class: 114
-      Script: {instanceID: 5896}
+      Script: {instanceID: 5880}
     - Class: 114
-      Script: {instanceID: 5962}
+      Script: {instanceID: 5886}
     - Class: 114
-      Script: {instanceID: 6048}
+      Script: {instanceID: 5900}
+    - Class: 114
+      Script: {instanceID: 5966}
+    - Class: 114
+      Script: {instanceID: 6052}
+    - Class: 114
+      Script: {instanceID: 40340}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -256,6 +277,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -285,45 +310,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2506}
     - Class: 114
-      Script: {instanceID: 2568}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2640}
+      Script: {instanceID: 2756}
     - Class: 114
-      Script: {instanceID: 2758}
+      Script: {instanceID: 2930}
     - Class: 114
-      Script: {instanceID: 2932}
+      Script: {instanceID: 2980}
     - Class: 114
-      Script: {instanceID: 2982}
+      Script: {instanceID: 3046}
     - Class: 114
-      Script: {instanceID: 3178}
+      Script: {instanceID: 3180}
     - Class: 114
-      Script: {instanceID: 3252}
+      Script: {instanceID: 3254}
     - Class: 114
-      Script: {instanceID: 3440}
+      Script: {instanceID: 3442}
     - Class: 114
-      Script: {instanceID: 3534}
+      Script: {instanceID: 3536}
     - Class: 114
-      Script: {instanceID: 3592}
+      Script: {instanceID: 3594}
     - Class: 114
-      Script: {instanceID: 3604}
+      Script: {instanceID: 3606}
     - Class: 114
-      Script: {instanceID: 3794}
+      Script: {instanceID: 3796}
     - Class: 114
-      Script: {instanceID: 3948}
+      Script: {instanceID: 3950}
     - Class: 114
-      Script: {instanceID: 4132}
+      Script: {instanceID: 4136}
     - Class: 114
-      Script: {instanceID: 4650}
+      Script: {instanceID: 4654}
     - Class: 114
-      Script: {instanceID: 4682}
+      Script: {instanceID: 4686}
     - Class: 114
-      Script: {instanceID: 4864}
+      Script: {instanceID: 4868}
     - Class: 114
-      Script: {instanceID: 5718}
+      Script: {instanceID: 5066}
     - Class: 114
-      Script: {instanceID: 5896}
+      Script: {instanceID: 5722}
     - Class: 114
-      Script: {instanceID: 5940}
+      Script: {instanceID: 5880}
+    - Class: 114
+      Script: {instanceID: 5900}
+    - Class: 114
+      Script: {instanceID: 5944}
+    - Class: 114
+      Script: {instanceID: 40340}
+    - Class: 114
+      Script: {instanceID: 60528}
+    - Class: 114
+      Script: {instanceID: 60540}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -519,7 +554,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 42b28b376eedc413b69b143f10bc211b
+      Hash: 8e362ac6469c34d40886efb8f0556f11
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: LocalizationManager
@@ -531,7 +566,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 65148e42b6732e48d5b18d46ea43a247
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: AudioButton
@@ -541,12 +576,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: Rotate
-  - hash:
-      serializedVersion: 2
-      Hash: 03b188d17aebfe1c86a5c4d4f90de589
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: ArkanoidProj
-    className: SettingsWindow
   - hash:
       serializedVersion: 2
       Hash: cfdd0010efd7b54c2b7512656dbc9119
@@ -613,6 +642,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: c49cc96989cda02f9924d8297de9cf68
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: BallSound
+  - hash:
+      serializedVersion: 2
+      Hash: 94a27e1eb2938741764cc3f31ec2b447
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: SettingsWindow
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -975,10 +1016,10 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 6543c34a6d04aab374e088a43de347dc
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
-    className: SoundAndMusic
+    className: AudioController
   - hash:
       serializedVersion: 2
       Hash: 28cfb4bd305dd11c6326cc3ee7c14138
@@ -1080,7 +1121,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
-    className: LocalazidText
+    className: LocalizedText
   - hash:
       serializedVersion: 2
       Hash: 31f859ebc87ce5c71766c8103c8c754c
@@ -1129,6 +1170,24 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIColliderSetter
+  - hash:
+      serializedVersion: 2
+      Hash: 4d39ec4cc7bc9dc30d1b882670e41fca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: TriggerAction
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: UserProgress
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: UserScoreText
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity

@@ -3,21 +3,29 @@ using UnityEngine.UI;
 
 namespace ArkanoidProj
 {
+    [RequireComponent(typeof(Image), typeof(TriggerAction))]
     public class AudioButton : MonoBehaviour
     {
-        [SerializeField] private string _name;
-        private bool _enable = true;
+        [SerializeField] private TypeOfAudio _typeAudio;
 
-        public void SetState(bool value)
+        private TriggerAction _trigger;
+
+        private void Awake()
         {
-            _enable = value;
+            _trigger = GetComponent<TriggerAction>();
         }
 
-        public void Change()
+        private void OnEnable()
         {
-            _enable = !_enable;
-            Debug.Log($"{_name}: {_enable}");
-
+            switch (_typeAudio)
+            {
+                case TypeOfAudio.Music:
+                    _trigger.IsEnable = AudioController.Audio.GetMusicValue();
+                    break;
+                case TypeOfAudio.Sound:
+                    _trigger.IsEnable = AudioController.Audio.GetSoundValue();
+                    break;
+            }
         }
     }
 }

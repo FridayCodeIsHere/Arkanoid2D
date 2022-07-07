@@ -32,10 +32,10 @@ namespace ArkanoidProj
             }
         }
 
-        private void OnDestroy()
-        {
-            Debug.Log("Localization destroy");
-        }
+        //private void OnDestroy()
+        //{
+        //    Debug.Log("Localization destroy");
+        //}
 
         public void SetLanguage(int id)
         {

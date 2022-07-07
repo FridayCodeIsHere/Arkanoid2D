@@ -4,11 +4,12 @@ using UnityEngine;
 
 namespace ArkanoidProj
 {
-    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Rigidbody2D), typeof(BallSound))]
     public class BallMovement : MonoBehaviour
     {
         [SerializeField] private GameObject _lineEffect;
         private Rigidbody2D _rigidbody;
+        private BallSound _ballSound;
         private bool _isActive = false;
         private const float Force = 10f;
         private float _lastPositionX;
@@ -23,9 +24,10 @@ namespace ArkanoidProj
             PlatformInput.OnClicked -= BallActivate;
         }
 
-        private void Start()
+        private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
+            _ballSound = GetComponent<BallSound>();
         }
 
         private void BallActivate()
@@ -38,6 +40,7 @@ namespace ArkanoidProj
                 transform.SetParent(null);
                 _rigidbody.bodyType = RigidbodyType2D.Dynamic;
                 AddForce(0, -1); //fall down at the start
+                _ballSound.PlaySoundCollision();
             }
 
             
