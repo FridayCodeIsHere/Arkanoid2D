@@ -9,18 +9,18 @@ namespace ArkanoidProj
 
         private void OnEnable()
         {
-            _musicTrigger.SetState(AudioController.Audio.GetMusicValue());
-            _soundTrigger.SetState(AudioController.Audio.GetSoundValue());
+            _musicTrigger.SetState(SettingsController.Instance.GetMusicValue());
+            _soundTrigger.SetState(SettingsController.Instance.GetSoundValue());
         }
 
         public void ChangeSound()
         {
-            AudioController.Audio.ChangeSound();
+            SettingsController.Instance.ChangeSound();
         }
 
         public void ChangeMusic()
         {
-            AudioController.Audio.ChangeMusic();
+            SettingsController.Instance.ChangeMusic();
         }
     }
 }

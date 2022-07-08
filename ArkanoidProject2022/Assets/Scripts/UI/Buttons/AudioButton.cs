@@ -20,10 +20,10 @@ namespace ArkanoidProj
             switch (_typeAudio)
             {
                 case TypeOfAudio.Music:
-                    _trigger.IsEnable = AudioController.Audio.GetMusicValue();
+                    _trigger.SetState(SettingsController.Instance.GetMusicValue());
                     break;
                 case TypeOfAudio.Sound:
-                    _trigger.IsEnable = AudioController.Audio.GetSoundValue();
+                    _trigger.SetState(SettingsController.Instance.GetSoundValue());
                     break;
             }
         }

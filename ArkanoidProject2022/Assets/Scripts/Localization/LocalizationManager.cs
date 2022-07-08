@@ -30,6 +30,7 @@ namespace ArkanoidProj
             {
                 LoadLocalization();
             }
+            SetLanguage(SettingsController.Instance.GetLanguageIndex());
         }
 
         //private void OnDestroy()
@@ -41,6 +42,7 @@ namespace ArkanoidProj
         {
             SelectedLanguage = id;
             OnLanguageChange?.Invoke();
+            SettingsController.Instance.SetLanguageIndex(id);
         }
 
         private void LoadLocalization()

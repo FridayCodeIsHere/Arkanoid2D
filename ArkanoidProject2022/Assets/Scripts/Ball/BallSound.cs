@@ -19,7 +19,7 @@ namespace ArkanoidProj {
 
         public void PlaySoundAwake()
         {
-            if (AudioController.Audio.GetMusicValue())
+            if (SettingsController.Instance.GetMusicValue())
             {
                 _audioSource.PlayOneShot(_awake);
             }
@@ -27,7 +27,7 @@ namespace ArkanoidProj {
 
         public void PlaySoundCollision()
         {
-            if (AudioController.Audio.GetSoundValue())
+            if (SettingsController.Instance.GetSoundValue())
             {
                 _audioSource.PlayOneShot(_collision);
             }
