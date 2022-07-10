@@ -4,7 +4,6 @@ ScriptsOnlyBuild:
     - ArkanoidProj.LevelEditor
     Assembly-CSharp.dll:
     - ArkanoidProj.AudioButton
-    - ArkanoidProj.AudioController
     - ArkanoidProj.BallCollision
     - ArkanoidProj.BallCount
     - ArkanoidProj.BallCreator
@@ -23,6 +22,7 @@ ScriptsOnlyBuild:
     - ArkanoidProj.GameLevel
     - ArkanoidProj.GameState
     - ArkanoidProj.IntToText
+    - ArkanoidProj.LanguageToggleGroup
     - ArkanoidProj.LevelButton
     - ArkanoidProj.LevelGenerator
     - ArkanoidProj.LevelNavigator
@@ -39,11 +39,12 @@ ScriptsOnlyBuild:
     - ArkanoidProj.RenderLifes
     - ArkanoidProj.Rotate
     - ArkanoidProj.SaveArea
+    - ArkanoidProj.SettingsController
     - ArkanoidProj.SettingsWindow
     - ArkanoidProj.TopCollider
     - ArkanoidProj.TriggerAction
     - ArkanoidProj.UserProgress
-    - ArkanoidProj.UserScoreText
+    - ArkanoidProj.UserProgressText
     - ArkanoidProj.WindowController
     - ArkanoidProj.WindowEndGame
     - ArkanoidProj.WindowEvent
@@ -73,10 +74,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -94,8 +93,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Text
-    - UnityEngine.UI.Toggle
-    - UnityEngine.UI.ToggleGroup
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -163,69 +160,65 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2436}
     - Class: 114
-      Script: {instanceID: 2506}
-    - Class: 114
       Script: {instanceID: 2526}
     - Class: 114
-      Script: {instanceID: 2638}
+      Script: {instanceID: 2640}
     - Class: 114
-      Script: {instanceID: 2756}
+      Script: {instanceID: 2758}
     - Class: 114
-      Script: {instanceID: 2868}
+      Script: {instanceID: 2870}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2932}
     - Class: 114
-      Script: {instanceID: 3044}
+      Script: {instanceID: 3046}
     - Class: 114
-      Script: {instanceID: 3180}
+      Script: {instanceID: 3182}
     - Class: 114
-      Script: {instanceID: 3434}
+      Script: {instanceID: 3438}
     - Class: 114
-      Script: {instanceID: 3442}
+      Script: {instanceID: 3446}
     - Class: 114
-      Script: {instanceID: 3594}
+      Script: {instanceID: 3598}
     - Class: 114
-      Script: {instanceID: 3798}
+      Script: {instanceID: 3802}
     - Class: 114
-      Script: {instanceID: 3824}
+      Script: {instanceID: 3828}
     - Class: 114
-      Script: {instanceID: 3928}
+      Script: {instanceID: 3932}
     - Class: 114
-      Script: {instanceID: 4136}
+      Script: {instanceID: 4142}
     - Class: 114
-      Script: {instanceID: 4194}
+      Script: {instanceID: 4200}
     - Class: 114
-      Script: {instanceID: 4330}
+      Script: {instanceID: 4338}
     - Class: 114
-      Script: {instanceID: 4686}
+      Script: {instanceID: 4694}
     - Class: 114
-      Script: {instanceID: 5010}
+      Script: {instanceID: 5018}
     - Class: 114
-      Script: {instanceID: 5304}
+      Script: {instanceID: 5312}
     - Class: 114
-      Script: {instanceID: 5316}
+      Script: {instanceID: 5324}
     - Class: 114
-      Script: {instanceID: 5582}
+      Script: {instanceID: 5590}
     - Class: 114
-      Script: {instanceID: 5668}
+      Script: {instanceID: 5676}
     - Class: 114
-      Script: {instanceID: 5778}
+      Script: {instanceID: 5786}
     - Class: 114
-      Script: {instanceID: 5828}
-    - Class: 114
-      Script: {instanceID: 5878}
-    - Class: 114
-      Script: {instanceID: 5880}
+      Script: {instanceID: 5836}
     - Class: 114
       Script: {instanceID: 5886}
     - Class: 114
-      Script: {instanceID: 5900}
+      Script: {instanceID: 5888}
     - Class: 114
-      Script: {instanceID: 5966}
+      Script: {instanceID: 5894}
     - Class: 114
-      Script: {instanceID: 6052}
+      Script: {instanceID: 5908}
     - Class: 114
-      Script: {instanceID: 40340}
+      Script: {instanceID: 5974}
+    - Class: 114
+      Script: {instanceID: 6060}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -298,8 +291,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1670}
     - Class: 114
-      Script: {instanceID: 1680}
-    - Class: 114
       Script: {instanceID: 2030}
     - Class: 114
       Script: {instanceID: 2312}
@@ -310,55 +301,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2506}
     - Class: 114
-      Script: {instanceID: 2638}
+      Script: {instanceID: 2542}
     - Class: 114
-      Script: {instanceID: 2756}
+      Script: {instanceID: 2640}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2758}
     - Class: 114
-      Script: {instanceID: 2980}
+      Script: {instanceID: 2932}
     - Class: 114
-      Script: {instanceID: 3046}
+      Script: {instanceID: 2982}
     - Class: 114
-      Script: {instanceID: 3180}
+      Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 3254}
+      Script: {instanceID: 3182}
     - Class: 114
-      Script: {instanceID: 3442}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 3536}
+      Script: {instanceID: 3258}
     - Class: 114
-      Script: {instanceID: 3594}
+      Script: {instanceID: 3446}
     - Class: 114
-      Script: {instanceID: 3606}
+      Script: {instanceID: 3598}
     - Class: 114
-      Script: {instanceID: 3796}
+      Script: {instanceID: 3610}
     - Class: 114
-      Script: {instanceID: 3950}
+      Script: {instanceID: 3800}
     - Class: 114
-      Script: {instanceID: 4136}
+      Script: {instanceID: 3954}
     - Class: 114
-      Script: {instanceID: 4654}
+      Script: {instanceID: 4096}
     - Class: 114
-      Script: {instanceID: 4686}
+      Script: {instanceID: 4142}
     - Class: 114
-      Script: {instanceID: 4868}
+      Script: {instanceID: 4278}
     - Class: 114
-      Script: {instanceID: 5066}
+      Script: {instanceID: 4662}
     - Class: 114
-      Script: {instanceID: 5722}
+      Script: {instanceID: 4694}
     - Class: 114
-      Script: {instanceID: 5880}
+      Script: {instanceID: 4876}
     - Class: 114
-      Script: {instanceID: 5900}
+      Script: {instanceID: 5074}
     - Class: 114
-      Script: {instanceID: 5944}
+      Script: {instanceID: 5730}
     - Class: 114
-      Script: {instanceID: 40340}
+      Script: {instanceID: 5888}
     - Class: 114
-      Script: {instanceID: 60528}
+      Script: {instanceID: 5908}
     - Class: 114
-      Script: {instanceID: 60540}
+      Script: {instanceID: 5952}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -506,7 +497,7 @@ ScriptsOnlyBuild:
     className: PlatformLife
   - hash:
       serializedVersion: 2
-      Hash: db41013288ecadc936282228aea36dc0
+      Hash: 8356bbae616b9d811ae27d9b18c33e4b
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: ButtonEvent
@@ -576,6 +567,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: Rotate
+  - hash:
+      serializedVersion: 2
+      Hash: a81fc838f570192b994fafc71b138ca5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: TriggerAction
   - hash:
       serializedVersion: 2
       Hash: cfdd0010efd7b54c2b7512656dbc9119
@@ -666,6 +663,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: ffcb931987474ede80167532a1a257c9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: UserProgressText
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -830,6 +833,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 7aec37478fc9718baed7e9ae7db8cec0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: LanguageToggleGroup
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -882,6 +891,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: UserProgress
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1019,7 +1034,7 @@ ScriptsOnlyBuild:
       Hash: 6543c34a6d04aab374e088a43de347dc
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
-    className: AudioController
+    className: SettingsController
   - hash:
       serializedVersion: 2
       Hash: 28cfb4bd305dd11c6326cc3ee7c14138
@@ -1170,24 +1185,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIColliderSetter
-  - hash:
-      serializedVersion: 2
-      Hash: 4d39ec4cc7bc9dc30d1b882670e41fca
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: ArkanoidProj
-    className: TriggerAction
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: ArkanoidProj
-    className: UserProgress
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: ArkanoidProj
-    className: UserScoreText
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity

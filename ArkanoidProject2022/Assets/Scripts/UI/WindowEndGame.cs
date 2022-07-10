@@ -13,6 +13,7 @@ namespace ArkanoidProj {
             TypeOfLevel typeLevel = LevelNavigator.Instance.LevelType;
             EndGameData endGameData = _calculationLevel.GetEndData(typeLevel);
             UserProgress.Instance.AddScore(endGameData.Score);
+            UserProgress.Instance.AddCrystal(endGameData.Crystal);
             _scoreText.text = endGameData.Score.ToString();
             _crystalText.text = endGameData.Crystal.ToString();
         }
