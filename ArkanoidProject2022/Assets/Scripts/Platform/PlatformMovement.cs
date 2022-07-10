@@ -62,5 +62,11 @@ namespace ArkanoidProj
         {
             _rigidbody.position = new Vector2(0f, _rigidbody.position.y);
         }
+
+        public float GetSize()
+        {
+            Vector2 size = _rigidbody.GetComponent<SpriteRenderer>().size;
+            return size.x;
+        }
     }
 }
