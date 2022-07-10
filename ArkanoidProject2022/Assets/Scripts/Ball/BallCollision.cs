@@ -9,6 +9,7 @@ namespace ArkanoidProj
         private BallMovement _ballMovement;
         private const float HORIZONTAL_ANGLE_LIMIT = 7; //ratio "x:y" of a possible bounce to unstuck horizontally flying ball = ~8° 
         private BallSound _ballSound;
+        private long lastPlatformHit = currentTime();
 
         private void Awake()
         {
@@ -18,12 +19,22 @@ namespace ArkanoidProj
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            _ballSound.PlaySoundCollision();
-            Vector2 currentPosition = transform.position;
+       
             PlatformMovement platformMove = collision.gameObject.GetComponent<PlatformMovement>();
-         PlatformMovement platformMove = collision.gameObject.GetComponent<PlatformMovement>();
+            
+            //ignore unity physics bug with multiple collisions at once
+            if (platformMove)
+            {
+                if (lastPlatformHit + 50 < currentTime())
+                {
+                    lastPlatformHit = currentTime();
+                }
+                else {
+                    return;
+                }
+            }
 
-
+            _ballSound.PlaySoundCollision();
 
             if (collision.gameObject.TryGetComponent(out IDamageable damageable))
             {
@@ -63,23 +74,11 @@ namespace ArkanoidProj
                 float x = sideInPercent * HORIZONTAL_ANGLE_LIMIT;
                 curDir.x = x;
                 curDir.y = 1; //always top, just the ratio is important now, normalization will happen later
-                    float difference = platformCenterPos - collisionPointX;
-                    float direction = collisionPointX < platformCenterPos ? -1 : 1;
-                    _ballMovement.AddForce(direction * Mathf.Abs(difference), 1);
-                    _lastDirection = direction;
                 }
-            }
-            else
-            {
-                if (currentPosition.y < _lastPosition.y + 0.35f && currentPosition.y > _lastPosition.y - 0.35f)
-                {
-                    Debug.Log("The same Y position");
-                    //Change direction of the ball here
-                }
-            }
 
             //correct too horizontal directions
-            if (Math.Abs(curDir.x) > HORIZONTAL_ANGLE_LIMIT * Math.Abs(curDir.y)) {//bounce is too horizontal
+            if (Math.Abs(curDir.x) > HORIZONTAL_ANGLE_LIMIT * Math.Abs(curDir.y))
+            {//bounce is too horizontal
                 Vector2 newDir = new Vector2();
                 float x = curDir.x;
                 float y = curDir.y;
@@ -88,10 +87,14 @@ namespace ArkanoidProj
                 newDir = newDir.normalized * origSpeed; //keep the corrected direction, set the original speed
                 curDir = newDir;
             }
-            
+
             return curDir.normalized * origSpeed; //keep the corrected direction, set the original speed
+
         }
-    
+
+        private static long currentTime() { 
+        return DateTimeOffset.Now.ToUnixTimeMilliseconds();
+        }
     }
 }
 
