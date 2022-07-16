@@ -16,11 +16,18 @@ namespace ArkanoidProj
 
         public void SetDefault()
         {
+            AudioManager.Instance.PlaySound("StartGame");
+            Invoke(nameof(PlayBGMusic), 1f);
             _score = 0;
             _crystal = 0;
 
             _UpdateScore.Invoke(_score);
             _UpdateCrystal.Invoke(_crystal);
+        }
+
+        private void PlayBGMusic()
+        {
+            SettingsController.Instance.PlayRandomGameSound();
         }
 
         private void OnEnable()
@@ -46,12 +53,9 @@ namespace ArkanoidProj
 
         private void CrystalCollect()
         {
-            if (_gameState.State == State.Gameplay)
-            {
-                Debug.Log("Update Crystals");
-                _crystal++;
-                _UpdateCrystal.Invoke(_crystal);
-            }
+            Debug.Log("Update Crystals");
+            _crystal++;
+            _UpdateCrystal.Invoke(_crystal);
         }
     }
 }

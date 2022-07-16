@@ -3,18 +3,16 @@ using System;
 
 namespace ArkanoidProj
 {
-    [RequireComponent(typeof(BallMovement), typeof(BallSound))]
+    [RequireComponent(typeof(BallMovement))]
     public class BallCollision : MonoBehaviour
     {
         private BallMovement _ballMovement;
         private const float HORIZONTAL_ANGLE_LIMIT = 7; //ratio "x:y" of a possible bounce to unstuck horizontally flying ball = ~8° 
-        private BallSound _ballSound;
-        private long lastPlatformHit = currentTime();
+        private long lastPlatformHit = CurrentTime();
 
         private void Awake()
         {
             _ballMovement = GetComponent<BallMovement>();
-            _ballSound = GetComponent<BallSound>();
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -25,16 +23,16 @@ namespace ArkanoidProj
             //ignore unity physics bug with multiple collisions at once
             if (platformMove)
             {
-                if (lastPlatformHit + 50 < currentTime())
+                if (lastPlatformHit + 50 < CurrentTime())
                 {
-                    lastPlatformHit = currentTime();
+                    lastPlatformHit = CurrentTime();
                 }
-                else {
+                else 
+                {
                     return;
                 }
             }
 
-            _ballSound.PlaySoundCollision();
 
             if (collision.gameObject.TryGetComponent(out IDamageable damageable))
             {
@@ -46,10 +44,10 @@ namespace ArkanoidProj
                 blockComposite.ApplyDamage(collision.contacts[0].point);
             }
 
-            gameObject.GetComponent<Rigidbody2D>().velocity = calculateBounce(collision, platformMove);
+            gameObject.GetComponent<Rigidbody2D>().velocity = CalculateBounce(collision, platformMove);
         }
 
-        private Vector2 calculateBounce(Collision2D collision, PlatformMovement platformMove) {
+        private Vector2 CalculateBounce(Collision2D collision, PlatformMovement platformMove) {
 
             //ContactPoint2D contact = collision.contacts[0];
             Vector2 curDir = gameObject.GetComponent<Rigidbody2D>().velocity;
@@ -92,8 +90,8 @@ namespace ArkanoidProj
 
         }
 
-        private static long currentTime() { 
-        return DateTimeOffset.Now.ToUnixTimeMilliseconds();
+        private static long CurrentTime() { 
+            return DateTimeOffset.Now.ToUnixTimeMilliseconds();
         }
     }
 }

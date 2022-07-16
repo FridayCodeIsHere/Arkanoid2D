@@ -33,6 +33,8 @@ namespace ArkanoidProj
             LevelIndex levelIndex = new LevelIndex();
             levelIndex.SetIndex(typeLevel, _index);
 
+            //SettingsController.Instance.PlayRandomGameSound();
+            SettingsController.Instance.StopMenuMusic();
             Loader loader = new Loader();
             loader.LoadingMainScene(false);
         }

@@ -8,33 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5772386427881223890}
+  - component: {fileID: 6184899688419143901}
   - component: {fileID: 1888325374662246487}
   - component: {fileID: 7249065806591275862}
   - component: {fileID: 6280300113104006376}
   - component: {fileID: 6631560129144173164}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: Crystal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5772386427881223890
-Transform:
+--- !u!224 &6184899688419143901
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662003906445449357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3323266, y: -1.0316762, z: -754.09735}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9200653028736970473}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 320, y: 240}
+  m_SizeDelta: {x: 640, y: 480}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1888325374662246487
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -72,9 +77,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -775800119
-  m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingLayerID: 1964264113
+  m_SortingLayer: 2
+  m_SortingOrder: 100
   m_Sprite: {fileID: 3592253307284894137, guid: 92dea73f22daf134da8c8ea2977d3a30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -146,7 +151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9200653028736970473}
   - component: {fileID: 7042244368074328757}
-  m_Layer: 3
+  m_Layer: 5
   m_Name: LineEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +169,7 @@ Transform:
   m_LocalPosition: {x: 0.016, y: -0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5772386427881223890}
+  m_Father: {fileID: 6184899688419143901}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &7042244368074328757
@@ -205,9 +210,9 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1964264113
+  m_SortingLayer: 2
+  m_SortingOrder: 80
   m_Time: 0.4
   m_Parameters:
     serializedVersion: 3

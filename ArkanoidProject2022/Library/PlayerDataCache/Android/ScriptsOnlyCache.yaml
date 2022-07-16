@@ -4,11 +4,11 @@ ScriptsOnlyBuild:
     - ArkanoidProj.LevelEditor
     Assembly-CSharp.dll:
     - ArkanoidProj.AudioButton
+    - ArkanoidProj.AudioManager
     - ArkanoidProj.BallCollision
     - ArkanoidProj.BallCount
     - ArkanoidProj.BallCreator
     - ArkanoidProj.BallMovement
-    - ArkanoidProj.BallSound
     - ArkanoidProj.Block
     - ArkanoidProj.BlockComposite
     - ArkanoidProj.BlockData
@@ -19,6 +19,8 @@ ScriptsOnlyBuild:
     - ArkanoidProj.ClearLevel
     - ArkanoidProj.Crystal
     - ArkanoidProj.CrystalImage
+    - ArkanoidProj.FingerInput
+    - ArkanoidProj.FingerMove
     - ArkanoidProj.GameLevel
     - ArkanoidProj.GameState
     - ArkanoidProj.IntToText
@@ -33,7 +35,6 @@ ScriptsOnlyBuild:
     - ArkanoidProj.LostZone
     - ArkanoidProj.MenuWindowSystem
     - ArkanoidProj.PanelLevels
-    - ArkanoidProj.PlatformInput
     - ArkanoidProj.PlatformLife
     - ArkanoidProj.PlatformMovement
     - ArkanoidProj.RenderLifes
@@ -41,6 +42,8 @@ ScriptsOnlyBuild:
     - ArkanoidProj.SaveArea
     - ArkanoidProj.SettingsController
     - ArkanoidProj.SettingsWindow
+    - ArkanoidProj.SolidSound
+    - ArkanoidProj.TapText
     - ArkanoidProj.TopCollider
     - ArkanoidProj.TriggerAction
     - ArkanoidProj.UserProgress
@@ -48,6 +51,7 @@ ScriptsOnlyBuild:
     - ArkanoidProj.WindowController
     - ArkanoidProj.WindowEndGame
     - ArkanoidProj.WindowEvent
+    - ArkanoidProj.WindowSound
     - Deactivator
     - LevelsContent
     - UIColliderSetter
@@ -74,8 +78,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -91,6 +97,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Mask
+    - UnityEngine.UI.Outline
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Text
   sceneClasses:
@@ -112,8 +119,6 @@ ScriptsOnlyBuild:
     - Class: 50
       Script: {instanceID: 0}
     - Class: 58
-      Script: {instanceID: 0}
-    - Class: 60
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
@@ -160,17 +165,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2436}
     - Class: 114
-      Script: {instanceID: 2526}
+      Script: {instanceID: 2440}
     - Class: 114
-      Script: {instanceID: 2640}
+      Script: {instanceID: 2528}
     - Class: 114
-      Script: {instanceID: 2758}
+      Script: {instanceID: 2642}
     - Class: 114
-      Script: {instanceID: 2870}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 2932}
+      Script: {instanceID: 2872}
     - Class: 114
-      Script: {instanceID: 3046}
+      Script: {instanceID: 2934}
     - Class: 114
       Script: {instanceID: 3182}
     - Class: 114
@@ -184,6 +189,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3828}
     - Class: 114
+      Script: {instanceID: 3888}
+    - Class: 114
       Script: {instanceID: 3932}
     - Class: 114
       Script: {instanceID: 4142}
@@ -192,33 +199,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4338}
     - Class: 114
-      Script: {instanceID: 4694}
+      Script: {instanceID: 4394}
     - Class: 114
-      Script: {instanceID: 5018}
+      Script: {instanceID: 4508}
     - Class: 114
-      Script: {instanceID: 5312}
+      Script: {instanceID: 4700}
     - Class: 114
-      Script: {instanceID: 5324}
+      Script: {instanceID: 5024}
     - Class: 114
-      Script: {instanceID: 5590}
+      Script: {instanceID: 5318}
     - Class: 114
-      Script: {instanceID: 5676}
+      Script: {instanceID: 5330}
     - Class: 114
-      Script: {instanceID: 5786}
+      Script: {instanceID: 5596}
     - Class: 114
-      Script: {instanceID: 5836}
+      Script: {instanceID: 5682}
     - Class: 114
-      Script: {instanceID: 5886}
+      Script: {instanceID: 5792}
     - Class: 114
-      Script: {instanceID: 5888}
+      Script: {instanceID: 5842}
+    - Class: 114
+      Script: {instanceID: 5892}
     - Class: 114
       Script: {instanceID: 5894}
     - Class: 114
-      Script: {instanceID: 5908}
+      Script: {instanceID: 5900}
     - Class: 114
-      Script: {instanceID: 5974}
+      Script: {instanceID: 5914}
     - Class: 114
-      Script: {instanceID: 6060}
+      Script: {instanceID: 5980}
+    - Class: 114
+      Script: {instanceID: 6066}
+    - Class: 114
+      Script: {instanceID: 38014}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -299,17 +312,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2436}
     - Class: 114
-      Script: {instanceID: 2506}
+      Script: {instanceID: 2508}
     - Class: 114
-      Script: {instanceID: 2542}
+      Script: {instanceID: 2544}
     - Class: 114
-      Script: {instanceID: 2640}
+      Script: {instanceID: 2642}
     - Class: 114
-      Script: {instanceID: 2758}
+      Script: {instanceID: 2760}
     - Class: 114
-      Script: {instanceID: 2932}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 2982}
+      Script: {instanceID: 2984}
     - Class: 114
       Script: {instanceID: 3048}
     - Class: 114
@@ -335,21 +348,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4278}
     - Class: 114
-      Script: {instanceID: 4662}
+      Script: {instanceID: 4402}
     - Class: 114
-      Script: {instanceID: 4694}
+      Script: {instanceID: 4508}
     - Class: 114
-      Script: {instanceID: 4876}
+      Script: {instanceID: 4668}
     - Class: 114
-      Script: {instanceID: 5074}
+      Script: {instanceID: 4700}
     - Class: 114
-      Script: {instanceID: 5730}
+      Script: {instanceID: 4882}
     - Class: 114
-      Script: {instanceID: 5888}
+      Script: {instanceID: 5080}
     - Class: 114
-      Script: {instanceID: 5908}
+      Script: {instanceID: 5736}
     - Class: 114
-      Script: {instanceID: 5952}
+      Script: {instanceID: 5894}
+    - Class: 114
+      Script: {instanceID: 5914}
+    - Class: 114
+      Script: {instanceID: 5958}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -497,7 +514,7 @@ ScriptsOnlyBuild:
     className: PlatformLife
   - hash:
       serializedVersion: 2
-      Hash: 8356bbae616b9d811ae27d9b18c33e4b
+      Hash: db41013288ecadc936282228aea36dc0
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: ButtonEvent
@@ -524,7 +541,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
-    className: PlatformInput
+    className: FingerInput
   - hash:
       serializedVersion: 2
       Hash: 91e233d5d85f5e8e0f85fca070bdc00b
@@ -549,6 +566,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: LocalizationManager
+  - hash:
+      serializedVersion: 2
+      Hash: 03039991cba411ad0333f629e6711d51
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: SolidSound
   - hash:
       serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
@@ -639,12 +662,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
-  - hash:
-      serializedVersion: 2
-      Hash: c49cc96989cda02f9924d8297de9cf68
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: ArkanoidProj
-    className: BallSound
   - hash:
       serializedVersion: 2
       Hash: 94a27e1eb2938741764cc3f31ec2b447
@@ -785,7 +802,7 @@ ScriptsOnlyBuild:
     className: CrystalImage
   - hash:
       serializedVersion: 2
-      Hash: 3cf156985df62fac63708d6bed3583bf
+      Hash: 69e4eac3b346a2a2f48bd74359fe66cb
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: PlatformMovement
@@ -917,6 +934,18 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: FingerMove
+  - hash:
+      serializedVersion: 2
+      Hash: 62a7c302be1c342e0bf5926e2ad0a1c9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: AudioManager
+  - hash:
+      serializedVersion: 2
       Hash: 87cef3c82381dc586f6772c3e27561b6
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -933,6 +962,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 4b8dd7c4e4a3bda8ea86311f3449294c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: WindowSound
   - hash:
       serializedVersion: 2
       Hash: 0edeba255bdbade25edc357f1412ba38
@@ -1031,7 +1066,7 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
-      Hash: 6543c34a6d04aab374e088a43de347dc
+      Hash: fa601506ef383da5a03acbb61ef693e7
     assemblyName: Assembly-CSharp.dll
     namespaceName: ArkanoidProj
     className: SettingsController
@@ -1185,6 +1220,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIColliderSetter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ArkanoidProj
+    className: TapText
   platform: 13
   scenePathNames:
   - Assets/Scenes/Main.unity

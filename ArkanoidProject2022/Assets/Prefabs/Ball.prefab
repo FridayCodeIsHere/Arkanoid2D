@@ -72,7 +72,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Time: 1
+  m_Time: 0.5
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -80,8 +80,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.014831543
-        value: 0.23830795
+        time: 0.010437012
+        value: 0.25753403
         inSlope: -0.021613093
         outSlope: -0.021613093
         tangentMode: 0
@@ -89,13 +89,13 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.36062622
       - serializedVersion: 3
-        time: 0.98205125
-        value: 0.06857143
-        inSlope: 0
-        outSlope: 0
+        time: 1
+        value: 0.2019219
+        inSlope: -0.042902693
+        outSlope: -0.042902693
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0
+        inWeight: 0.11377537
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 7494871498037590302}
   - component: {fileID: 1730519043125875888}
   - component: {fileID: 7063658929090836254}
-  - component: {fileID: 5355988755445537833}
+  - component: {fileID: 1149491089}
   m_Layer: 3
   m_Name: Ball
   m_TagString: Untagged
@@ -398,17 +398,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5355988755445537833
-MonoBehaviour:
+--- !u!95 &1149491089
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7494871498037590296}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3ba2d4564749734ca84b73220fd51bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _awake: {fileID: 8300000, guid: 347afec0951db2047a23e956d45a4c08, type: 3}
-  _collision: {fileID: 8300000, guid: b159cefed08ffd242a0b92b6342f131b, type: 3}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42aa9bc15833e244b966c265268bd774, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

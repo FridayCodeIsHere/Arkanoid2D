@@ -5,16 +5,15 @@ using UnityEngine;
 namespace ArkanoidProj
 {
 
-    [RequireComponent(typeof(Rigidbody2D), typeof(PlatformInput), typeof(SpriteRenderer))]
+    [RequireComponent(typeof(Rigidbody2D), typeof(FingerInput), typeof(SpriteRenderer))]
     public class PlatformMovement : MonoBehaviour
     {
-
-        [SerializeField] private float _speed = 8f;
+        [SerializeField] private Transform _target;
+        [SerializeField] private float _speed = 10f;
 
         private Rigidbody2D _rigidbody;
         private SpriteRenderer _spriteRenderer;
 
-        private float _moveX = 0f;
         private float _progress;
         private float _halfWidthPlatform;
         private const float BorderPosition = 5.1f;
@@ -26,15 +25,6 @@ namespace ArkanoidProj
         }
         #endregion
 
-        private void OnEnable()
-        {
-            PlatformInput.OnMove += Move;
-        }
-
-        private void OnDisable()
-        {
-            PlatformInput.OnMove -= Move;
-        }
 
         private void Awake()
         {
@@ -45,17 +35,8 @@ namespace ArkanoidProj
 
         private void FixedUpdate()
         {
-            //float positionX = _rigidbody.position.x + _moveX * _speed * Time.fixedDeltaTime;
-            //positionX = Mathf.Clamp(positionX, -BorderPosition + (_halfWidthPlatform), BorderPosition - (_halfWidthPlatform));
-            //_rigidbody.MovePosition(new Vector2(positionX, _rigidbody.position.y));
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePos.x = Mathf.Clamp(mousePos.x, -BorderPosition + (_halfWidthPlatform), BorderPosition - (_halfWidthPlatform));
-            transform.position = new Vector2(mousePos.x, transform.position.y);
-        }
-
-        private void Move(float moveX)
-        {
-            _moveX = moveX;
+            Vector3 targetNormalized = new Vector3(_target.position.x, transform.position.y);
+            transform.position = Vector3.Lerp(transform.position, targetNormalized, _speed * Time.fixedDeltaTime);
         }
 
         public void ResetPosition()

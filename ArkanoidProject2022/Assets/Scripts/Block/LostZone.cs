@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ArkanoidProj {
@@ -10,6 +8,7 @@ namespace ArkanoidProj {
             if (collision.gameObject.TryGetComponent(out BallMovement ball))
             {
                 Destroy(ball.gameObject);
+                AudioManager.Instance.PlaySound("RestartBall");
             }
         }
     }

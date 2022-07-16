@@ -36,7 +36,7 @@
     <Translates>
 	        <en>SCORE:</en>
 	        <cz>SKÓRE:</cz>
-	        <ua>РЕЗУЛЬТАТ:</ua>
+	        <ua>ОЧКИ:</ua>
 	        <pl>WYNIK:</pl>
 	    </Translates>
 	</Key>
@@ -112,6 +112,14 @@ Tylko wtedy odkryjesz starożytną tajemnicę i zdobędziesz „shem”, który 
 	        <pl>Rozwój:</pl>
 	    </Translates>
 	</Key>
+  <Key Name="TapToPlay_Key">
+    <Translates>
+      <en>Double tap to play!</en>
+      <cz>Zahrajte si dvojitým klepnutím!</cz>
+      <ua>Двічі торкніться, щоб грати!</ua>
+      <pl>Kliknij dwukrotnie, aby zagrać!</pl>
+    </Translates>
+  </Key>
 	<Key Name="GraphicsDesign_Key">
     <Translates>
 	        <en>Graphics and design:</en>

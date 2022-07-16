@@ -4,9 +4,12 @@ namespace ArkanoidProj
 {
     public class SettingsController : MonoBehaviour
     {
-        [SerializeField] private AudioSource _backgroundSource;
-        public static SettingsController Instance { get; private set; } = null;
+        [SerializeField] private string _menuMusicName;
+        [SerializeField] private string[] _gameMusicNames;
+
         private SettingsState _settingsState;
+
+        public static SettingsController Instance { get; private set; } = null;
 
         private void Awake()
         {
@@ -15,15 +18,16 @@ namespace ArkanoidProj
                 Instance = this;
                 DontDestroyOnLoad(this.gameObject);
                 _settingsState = new SettingsState();
-                if (_settingsState.GetAudioValues(TypeOfAudio.Music))
-                {
-                    _backgroundSource.Play();
-                }
             }
             else
             {
                 Destroy(this.gameObject);
             }
+        }
+
+        public void Start()
+        {
+            PlayMenuSound();
         }
 
         public void ChangeMusic()
@@ -32,12 +36,28 @@ namespace ArkanoidProj
 
             if (_settingsState.GetAudioValues(TypeOfAudio.Music))
             {
-                _backgroundSource.Play();
+                AudioManager.Instance.PlayMusic(_menuMusicName);
             }
             else
             {
-                _backgroundSource.Stop();
+                AudioManager.Instance.StopMusic();
             }
+        }
+
+        public void PlayMenuSound()
+        {
+            AudioManager.Instance.PlayMusic(_menuMusicName);
+        }
+
+        public void StopMenuMusic()
+        {
+            AudioManager.Instance.StopMusic();
+        }
+
+        public void PlayRandomGameSound()
+        {
+            int randomMusic = Random.Range(0, _gameMusicNames.Length);
+            AudioManager.Instance.PlayMusic(_gameMusicNames[randomMusic]);
         }
 
         public void ChangeSound()

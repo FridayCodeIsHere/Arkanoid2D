@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1618266094347276637}
   - component: {fileID: 1618266094347276636}
   - component: {fileID: 1618266094347276635}
-  - component: {fileID: 1618266094347276634}
   - component: {fileID: 1691566009428768531}
   m_Layer: 5
   m_Name: ConfirmButtom
@@ -134,19 +133,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1618266094347276634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618266094347276632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ca19b65cac3d14b9a0ca8afad43d25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _minAlpha: 0.6
 --- !u!95 &1691566009428768531
 Animator:
   serializedVersion: 3

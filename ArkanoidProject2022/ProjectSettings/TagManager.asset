@@ -48,3 +48,6 @@ TagManager:
   - name: Blocks
     uniqueID: 3519167177
     locked: 0
+  - name: GUI
+    uniqueID: 1964264113
+    locked: 0

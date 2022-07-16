@@ -6,16 +6,39 @@ namespace ArkanoidProj
     [RequireComponent(typeof(SpriteRenderer))]
     public class Crystal : MonoBehaviour
     {
+        public static int Count { get; private set; }
         [SerializeField] private TrailRenderer _lineEffect;
         private Rigidbody2D _rigidbody;
+        private Vector3 _crystalUiPos;
         private const float Speed = 5f;
         private bool _canDrop = false;
         private bool _isCollision = false;
         public static event Action OnCollision;
+        public static event Action OnEnded;
+
+        private void OnEnable()
+        {
+            Count++;
+        }
+
+        private void OnDisable()
+        {
+            Count--;
+            if (Block.Count < 1 && Count < 1)
+            {
+                OnEnded?.Invoke();
+            }
+        }
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
+        }
+
+        private void Start()
+        {
+            //_crystalUiPos = Camera.main.ScreenToWorldPoint(CrystalImage.Instance.GetCrystalPosition());
+            _crystalUiPos = CrystalImage.Instance.GetCrystalPosition();
         }
         public void SetData(Sprite sprite, Gradient colorGradient)
         {
@@ -24,11 +47,23 @@ namespace ArkanoidProj
             spriteRenderer.sprite = sprite;
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             if (_canDrop)
             {
-                _rigidbody.velocity = Vector3.down * Speed * 50f * Time.fixedDeltaTime;
+                if (false)
+                {
+                    //transform.position = Vector3.MoveTowards(transform.position, _crystalUiPos, Speed * 32f * Time.deltaTime);
+                    //if (Vector2.Distance(transform.position, _crystalUiPos) < 0.2f)
+                    //{
+                    //    TakenCrystal();
+                    //}
+                }
+                else
+                {
+                    transform.Translate(Vector2.down * Speed * Time.deltaTime);
+                }
+                
             }
         }
 
@@ -45,8 +80,7 @@ namespace ArkanoidProj
 
             if (platform && !_isCollision)
             {
-                OnCollision?.Invoke();
-                Destroy(this.gameObject);
+                TakenCrystal();
                 _isCollision = true;
             }
             else if (lostZone)
@@ -55,6 +89,13 @@ namespace ArkanoidProj
             }
 
 
+        }
+
+        private void TakenCrystal()
+        {
+            AudioManager.Instance.PlaySound("ApplyCrystal");
+            OnCollision?.Invoke();
+            Destroy(this.gameObject);
         }
     }
 }

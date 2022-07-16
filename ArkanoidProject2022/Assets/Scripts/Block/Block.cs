@@ -9,7 +9,7 @@ namespace ArkanoidProj
     [RequireComponent(typeof(SpriteRenderer), typeof(ParticleSystem))]
     public class Block : BaseBlock, IDamageable
     {
-        private static int _count = 0;
+        public static int Count { get; private set; }
         private bool _hasCrystal = false;
         private BlockData _blockData;
         
@@ -31,17 +31,18 @@ namespace ArkanoidProj
 
         private void OnEnable()
         {
-            _count++;
+            Count++;
         }
 
         private void OnDisable()
         {
-            _count--;
+            Count--;
             //OnDestroyed?.Invoke(_score);
-            if (_count < 1)
+            if (Count < 1 && Crystal.Count < 1)
             {
                 OnEnded?.Invoke();
             }
+
         }
 
         public void SetData(BlockData blockData)
@@ -67,6 +68,7 @@ namespace ArkanoidProj
             _life--;
             if (_life < 1)
             {
+                AudioManager.Instance.PlaySound("BlockDead");
                 OnDestroyed?.Invoke(_score);
                 _particleSystem.Play();
                 _spriteRenderer.enabled = false;
@@ -78,10 +80,12 @@ namespace ArkanoidProj
                     crystal.SetData(_blockData.Crystal, _blockData.ColorGradient);
                     crystal.DropDown();
                 }
+                
                 Invoke(nameof(Dead), 0.5f);
             }
             else
             {
+                AudioManager.Instance.PlaySound("WallCollision");
                 _spriteRenderer.sprite = _sprites[_life - 1];
             }
         }

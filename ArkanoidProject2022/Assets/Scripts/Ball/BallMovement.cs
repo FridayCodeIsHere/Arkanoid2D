@@ -1,33 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace ArkanoidProj
 {
-    [RequireComponent(typeof(Rigidbody2D), typeof(BallSound))]
+    [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
     public class BallMovement : MonoBehaviour
     {
         [SerializeField] private GameObject _lineEffect;
         private Rigidbody2D _rigidbody;
-        private BallSound _ballSound;
+        private Animator _animator;
         private bool _isActive = false;
         private const float Force = 10f;
-        private float _lastPositionX;
 
         private void OnEnable()
         {
-            PlatformInput.OnClicked += BallActivate;
+            FingerInput.OnClicked += BallActivate;
         }
 
         private void OnDisable()
         {
-            PlatformInput.OnClicked -= BallActivate;
+            FingerInput.OnClicked -= BallActivate;
         }
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-            _ballSound = GetComponent<BallSound>();
+            _animator = GetComponent<Animator>();
+        }
+
+        public void Start()
+        {
+            //BallActivate();
+            _animator.SetTrigger("Create");
         }
 
         private void BallActivate()
@@ -35,12 +38,10 @@ namespace ArkanoidProj
             if (!_isActive)
             {
                 _lineEffect.SetActive(true);
-                _lastPositionX = transform.position.x;
                 _isActive = true;
                 transform.SetParent(null);
                 _rigidbody.bodyType = RigidbodyType2D.Dynamic;
                 AddForce(0, -1); //fall down at the start
-                _ballSound.PlaySoundCollision();
             }
 
             

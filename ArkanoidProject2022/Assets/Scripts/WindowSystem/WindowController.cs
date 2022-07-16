@@ -13,11 +13,13 @@ namespace ArkanoidProj
         private void OnEnable()
         {
             Block.OnEnded += EndGame;
+            Crystal.OnEnded += EndGame;
         }
 
         private void OnDisable()
         {
             Block.OnEnded -= EndGame;
+            Crystal.OnEnded -= EndGame;
         }
 
         public void Play()
@@ -30,11 +32,14 @@ namespace ArkanoidProj
         public void Replay()
         {
             DisableWindows();
+            AudioManager.Instance.StopMusic();
+            //SettingsController.Instance.PlayRandomGameSound();
         }
 
         public void NextLevel()
         {
             _victoryWindow.SetActive(false);
+            //SettingsController.Instance.PlayRandomGameSound();
             //add logic
         }
 
@@ -45,6 +50,7 @@ namespace ArkanoidProj
             Loader loader = new Loader();
             _gameState.SetState(State.Other);
             loader.LoadingMainScene(true);
+            SettingsController.Instance.PlayMenuSound();
         }
 
 
