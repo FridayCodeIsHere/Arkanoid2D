@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ArkanoidProj
 {
     public enum TypeOfLevel
     {
+        None,
         LightBlue,
         Blue,
         LightRed,

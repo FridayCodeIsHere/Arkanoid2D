@@ -25,9 +25,6 @@ namespace ArkanoidProj
         public static event Action OnEnded;
         public static event Action<int> OnDestroyed;
 
-//#if UNITY_EDITOR
-//        public BlockData BlockData;
-//#endif
 
         private void OnEnable()
         {
@@ -60,6 +57,14 @@ namespace ArkanoidProj
             if (blockData.Crystal != null)
             {
                 _hasCrystal = true;
+            }
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Destroy(this.gameObject);
             }
         }
 

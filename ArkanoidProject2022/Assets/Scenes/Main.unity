@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 1957703}
   - component: {fileID: 1957704}
   - component: {fileID: 1957705}
+  - component: {fileID: 1957706}
   m_Layer: 5
   m_Name: Red--Button
   m_TagString: Untagged
@@ -436,6 +437,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1957706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5baa77d8bc7544c8b3f19869e8add5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _typeLevel: 4
+  _buttons:
+  - {fileID: 224442330}
+  - {fileID: 16541809}
+  - {fileID: 1617040073}
+  IsCompleted: 0
 --- !u!1001 &6983971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -614,6 +633,7 @@ GameObject:
   - component: {fileID: 16541806}
   - component: {fileID: 16541807}
   - component: {fileID: 16541808}
+  - component: {fileID: 16541809}
   m_Layer: 5
   m_Name: Blue--Button
   m_TagString: Untagged
@@ -912,6 +932,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &16541809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16541801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5baa77d8bc7544c8b3f19869e8add5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _typeLevel: 2
+  _buttons:
+  - {fileID: 224442330}
+  IsCompleted: 0
 --- !u!1001 &25942028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1665,6 +1701,7 @@ GameObject:
   - component: {fileID: 224442327}
   - component: {fileID: 224442328}
   - component: {fileID: 224442329}
+  - component: {fileID: 224442330}
   m_Layer: 5
   m_Name: LighBlue--Button
   m_TagString: Untagged
@@ -1963,6 +2000,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &224442330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224442322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5baa77d8bc7544c8b3f19869e8add5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _typeLevel: 1
+  _buttons: []
+  IsCompleted: 0
 --- !u!1 &231512246
 GameObject:
   m_ObjectHideFlags: 0
@@ -7489,7 +7541,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Libor Ha\u0161ek"
+  m_Text: "Alejandro Maga\xF1a (A. M.)"
 --- !u!222 &1415519288
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8207,6 +8259,7 @@ GameObject:
   - component: {fileID: 1617040070}
   - component: {fileID: 1617040071}
   - component: {fileID: 1617040072}
+  - component: {fileID: 1617040073}
   m_Layer: 5
   m_Name: LightRed--Button
   m_TagString: Untagged
@@ -8505,6 +8558,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1617040073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617040065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec5baa77d8bc7544c8b3f19869e8add5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _typeLevel: 3
+  _buttons:
+  - {fileID: 224442330}
+  - {fileID: 16541809}
+  IsCompleted: 0
 --- !u!1 &1626706782 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858528387117827467, guid: 24fca8a7eaa917444ac69e29a813eade, type: 3}

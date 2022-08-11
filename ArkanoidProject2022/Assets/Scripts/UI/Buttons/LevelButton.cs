@@ -11,13 +11,13 @@ namespace ArkanoidProj
         private Image _image;
         private int _index;
 
-        public void SetData(Progress progress, int index)
+        public void SetData(ProgressLevel progress, int index)
         {
             _image = GetComponent<Image>();
             _buttonText.text = (index + 1).ToString(); 
             _index = index;
 
-            if (progress.IsOpened == false)
+            if (progress.IsOpen == false)
             {
                 _button.interactable = false;
                 _image.color = new Color(1, 1, 1, 0.5f);
@@ -30,10 +30,10 @@ namespace ArkanoidProj
         {
             TypeOfLevel typeLevel = LevelNavigator.Instance.LevelType;
             LoadingScreen.Screen.Enable(true);
-            LevelIndex levelIndex = new LevelIndex();
-            levelIndex.SetIndex(typeLevel, _index);
 
-            //SettingsController.Instance.PlayRandomGameSound();
+            LevelManager levelManager = new LevelManager();
+            levelManager.SelectedLevel(typeLevel, _index);
+
             SettingsController.Instance.StopMenuMusic();
             Loader loader = new Loader();
             loader.LoadingMainScene(false);

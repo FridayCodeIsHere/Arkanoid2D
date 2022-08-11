@@ -18,9 +18,13 @@ namespace ArkanoidProj {
             PlayerPrefs.Save();
         }
 
-        private string GetKeyOfTypeLevel()
+        private string GetKeyOfTypeLevel(TypeOfLevel typeLevel = TypeOfLevel.None)
         {
-            TypeOfLevel typeLevel = LevelNavigator.Instance.LevelType;
+            if (typeLevel == TypeOfLevel.None)
+            {
+                typeLevel = LevelNavigator.Instance.LevelType;
+            }
+
             string key = "";
             switch (typeLevel)
             {
@@ -35,6 +39,9 @@ namespace ArkanoidProj {
                     break;
                 case TypeOfLevel.LightRed:
                     key = LightRedKeyLevel;
+                    break;
+                case TypeOfLevel.None:
+                    Debug.Log("None level");
                     break;
             }
             return key;
@@ -56,11 +63,11 @@ namespace ArkanoidProj {
             Resources.UnloadUnusedAssets();
         }
 
-        public LevelsProgress GetLevelProgress()
+        public LevelsProgress GetLevelProgress(TypeOfLevel type = TypeOfLevel.None)
         {
-            if (PlayerPrefs.HasKey(GetKeyOfTypeLevel()))
+            if (PlayerPrefs.HasKey(GetKeyOfTypeLevel(type)))
             {
-                string saveJson = PlayerPrefs.GetString(GetKeyOfTypeLevel());
+                string saveJson = PlayerPrefs.GetString(GetKeyOfTypeLevel(type));
                 _levelsProgress = JsonUtility.FromJson<LevelsProgress>(saveJson);
             }
             else
