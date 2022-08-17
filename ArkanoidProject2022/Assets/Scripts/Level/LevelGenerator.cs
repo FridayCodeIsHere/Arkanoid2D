@@ -16,7 +16,19 @@ namespace ArkanoidProj
         private void Start()
         {
             _gameState.SetState(State.StopGame);
-            Init();
+            if (Block.Count < 1)
+            {
+                Init();
+                Debug.Log("Init");
+            }
+            else
+            {
+                LoadingScreen.Screen.Enable(false);
+                OnGenerated?.Invoke();
+                _gameState.SetState(State.Gameplay);
+            }
+                
+            
         }
 
         private void Init()

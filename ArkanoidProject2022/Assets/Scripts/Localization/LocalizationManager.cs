@@ -31,6 +31,7 @@ namespace ArkanoidProj
                 LoadLocalization();
             }
             DontDestroyOnLoad(this.gameObject);
+            
             SetLanguage(SettingsController.Instance.GetLanguageIndex());
         }
 

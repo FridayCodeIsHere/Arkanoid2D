@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7342012992408907231}
   - component: {fileID: 722714981995735295}
   - component: {fileID: 3070135129146123323}
+  - component: {fileID: 864586960}
   m_Layer: 0
   m_Name: AudioController
   m_TagString: Untagged
@@ -44,7 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acd100244bb29d489660c92de4113f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _backgroundSource: {fileID: 3070135129146123323}
+  _menuMusicName: MenuMusic
+  _gameMusicNames:
+  - GameMusic-1
+  - GameMusic-2
+  - GameMusic-3
 --- !u!82 &3070135129146123323
 AudioSource:
   m_ObjectHideFlags: 0
@@ -56,7 +61,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 298853e752ff8664c92997e23ae7e8ca, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
@@ -141,3 +146,107 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &864586960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9140345373476022138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c918c4d25141534ba487a7f8d901bf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sounds:
+  - _name: OpenSimpleWindow
+    _isLoop: 0
+    _volume: 1
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: ba0c5f00e6800a74fb0f94d85e1cd658, type: 3}
+  - _name: CloseSimpleWindow
+    _isLoop: 0
+    _volume: 1
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: 47374030528e12140a79f9c9085b662a, type: 3}
+  - _name: ButtonClick
+    _isLoop: 0
+    _volume: 1
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: c1f266c23a8106f44a129f99f9f6f7bf, type: 3}
+  - _name: Victory
+    _isLoop: 0
+    _volume: 1
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: 7e78d8f174095f445bba8e71a8f646cd, type: 3}
+  - _name: GameOverSound
+    _isLoop: 0
+    _volume: 1
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: 976f20d773527a1409cb83caec67da61, type: 3}
+  - _name: WallCollision
+    _isLoop: 0
+    _volume: 1
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: 548e81f2eaa4c394c907033c9eb2fd68, type: 3}
+  - _name: PlatformCollision
+    _isLoop: 0
+    _volume: 1
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: d152269587a8ece4991d9b5670f5637d, type: 3}
+  - _name: BlockDead
+    _isLoop: 0
+    _volume: 1
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: 49fb7249cd491f941b21c1622a2ebea7, type: 3}
+  - _name: ApplyCrystal
+    _isLoop: 0
+    _volume: 1
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: b5e468d59a563074d9c3f4e3b3d37c5d, type: 3}
+  - _name: StartGame
+    _isLoop: 0
+    _volume: 1
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: cffdf26ba2670b940898563249fb0e02, type: 3}
+  - _name: RestartBall
+    _isLoop: 0
+    _volume: 1
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: 18e030ceeebec2c4892c37f62c356012, type: 3}
+  _musics:
+  - _name: MenuMusic
+    _isLoop: 1
+    _volume: 0.4
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: d8f44e5b3e6d61944b227c7a925ea857, type: 3}
+  - _name: GameMusic-1
+    _isLoop: 1
+    _volume: 0.4
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: 099c28be1d1564f44a21ee4de18049fa, type: 3}
+  - _name: GameMusic-2
+    _isLoop: 1
+    _volume: 0.4
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: a16e94e75ffb6c847a561f20a5faf5fb, type: 3}
+  - _name: GameMusic-3
+    _isLoop: 1
+    _volume: 0.4
+    _pitch: 1
+    _spaceSound: 0
+    _audioClip: {fileID: 8300000, guid: 708dda4693d683144969410a21bc3f21, type: 3}

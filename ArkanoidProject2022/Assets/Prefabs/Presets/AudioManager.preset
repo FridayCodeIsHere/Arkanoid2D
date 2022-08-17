@@ -1,0 +1,395 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AudioManager
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 2c918c4d25141534ba487a7f8d901bf9, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.size
+    value: 11
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[0]._name
+    value: OpenSimpleWindow
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[0]._isLoop
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[0]._volume
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[0]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[0]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[0]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: ba0c5f00e6800a74fb0f94d85e1cd658, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[1]._name
+    value: CloseSimpleWindow
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[1]._isLoop
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[1]._volume
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[1]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[1]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[1]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: 47374030528e12140a79f9c9085b662a, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[2]._name
+    value: ButtonClick
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[2]._isLoop
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[2]._volume
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[2]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[2]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[2]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: c1f266c23a8106f44a129f99f9f6f7bf, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[3]._name
+    value: Victory
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[3]._isLoop
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[3]._volume
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[3]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[3]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[3]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: 7e78d8f174095f445bba8e71a8f646cd, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[4]._name
+    value: GameOverSound
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[4]._isLoop
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[4]._volume
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[4]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[4]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[4]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: 976f20d773527a1409cb83caec67da61, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[5]._name
+    value: WallCollision
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[5]._isLoop
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[5]._volume
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[5]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[5]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[5]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: 548e81f2eaa4c394c907033c9eb2fd68, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[6]._name
+    value: PlatformCollision
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[6]._isLoop
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[6]._volume
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[6]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[6]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[6]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: d152269587a8ece4991d9b5670f5637d, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[7]._name
+    value: BlockDead
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[7]._isLoop
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[7]._volume
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[7]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[7]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[7]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: 49fb7249cd491f941b21c1622a2ebea7, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[8]._name
+    value: ApplyCrystal
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[8]._isLoop
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[8]._volume
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[8]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[8]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[8]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: b5e468d59a563074d9c3f4e3b3d37c5d, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[9]._name
+    value: StartGame
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[9]._isLoop
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[9]._volume
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[9]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[9]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[9]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: cffdf26ba2670b940898563249fb0e02, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[10]._name
+    value: RestartBall
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[10]._isLoop
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[10]._volume
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[10]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[10]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _sounds.Array.data[10]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: 18e030ceeebec2c4892c37f62c356012, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.size
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[0]._name
+    value: MenuMusic
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[0]._isLoop
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[0]._volume
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[0]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[0]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[0]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: d8f44e5b3e6d61944b227c7a925ea857, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[1]._name
+    value: GameMusic-1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[1]._isLoop
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[1]._volume
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[1]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[1]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[1]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: 099c28be1d1564f44a21ee4de18049fa, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[2]._name
+    value: GameMusic-2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[2]._isLoop
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[2]._volume
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[2]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[2]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[2]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: a16e94e75ffb6c847a561f20a5faf5fb, type: 3}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[3]._name
+    value: GameMusic-3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[3]._isLoop
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[3]._volume
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[3]._pitch
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[3]._spaceSound
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _musics.Array.data[3]._audioClip
+    value: 
+    objectReference: {fileID: 8300000, guid: 708dda4693d683144969410a21bc3f21, type: 3}
+  m_ExcludedProperties: []

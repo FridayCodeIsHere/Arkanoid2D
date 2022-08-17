@@ -98,7 +98,6 @@ namespace ArkanoidProj
                 if (level.IsOpen == false)
                 {
                     return false;
-                    break;
                 }
             }
             return true;

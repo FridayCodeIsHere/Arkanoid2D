@@ -55,7 +55,7 @@ namespace ArkanoidProj
                     key = LightRedLevel;
                     break;
                 default:
-                    Debug.LogWarning($"TypeOfLevel is null");
+                    //Debug.LogWarning($"TypeOfLevel is null");
                     break;
             }
             return key;

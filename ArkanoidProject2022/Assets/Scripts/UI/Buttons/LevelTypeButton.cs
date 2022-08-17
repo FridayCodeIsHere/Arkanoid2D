@@ -48,16 +48,6 @@ namespace ArkanoidProj {
 
             IsCompleted = levelManager.GetLevelData(_typeLevel).IsCompletedTypeLevel();
             Debug.Log($"IsCompleted: {IsCompleted}");
-            //LevelsData levelsData = new LevelsData();
-            //LevelsProgress levelsProgress = levelsData.GetLevelProgress(_typeLevel);
-            //for (int i = 0; i < levelsProgress.CountItemsInTypeLevel(); i++)
-            //{
-            //    if (!levelsProgress.GetIndexProgressOfTypeLevel(i).IsOpened)
-            //    {
-            //        IsCompleted = false;
-            //        break;
-            //    }
-            //}
         }
     }
 

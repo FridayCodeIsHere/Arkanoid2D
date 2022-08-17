@@ -41,7 +41,7 @@ namespace ArkanoidProj {
                     key = LightRedKeyLevel;
                     break;
                 case TypeOfLevel.None:
-                    Debug.Log("None level");
+                    //Debug.Log("None level");
                     break;
             }
             return key;
