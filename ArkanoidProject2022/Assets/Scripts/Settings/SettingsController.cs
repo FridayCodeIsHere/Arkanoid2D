@@ -77,6 +77,7 @@ namespace ArkanoidProj
 
         public int GetLanguageIndex()
         {
+
             return _settingsState.GetLanguageIndex();
         }
         public void SetLanguageIndex(int value)
