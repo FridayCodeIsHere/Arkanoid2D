@@ -33,6 +33,7 @@ namespace ArkanoidProj
 
             LevelManager levelManager = new LevelManager();
             levelManager.SelectedLevel(typeLevel, _index);
+            Debug.Log($"There is bug: {_index}");
 
             SettingsController.Instance.StopMenuMusic();
             Loader loader = new Loader();

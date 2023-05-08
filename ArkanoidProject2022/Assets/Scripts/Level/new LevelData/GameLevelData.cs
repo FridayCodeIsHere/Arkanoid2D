@@ -32,7 +32,8 @@ namespace ArkanoidProj
             for (int i = 0; i < levels.Length; i++)
             {
                 _levelsProgress.Add(new ProgressLevel());
-                _levelsProgress[i].SetLevel(levels[i]);
+                GameLevel level = levels.First(x => x.name == $"Level-{i}");
+                _levelsProgress[i].SetLevel(level);
             }
 
             _levelsProgress[0].IsOpen = true;

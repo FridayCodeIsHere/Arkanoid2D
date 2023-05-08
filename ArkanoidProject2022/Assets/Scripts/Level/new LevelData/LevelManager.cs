@@ -83,6 +83,7 @@ namespace ArkanoidProj {
                 if (selectTypeLevel.Key == typeLevel)
                 {
                     selectTypeLevel.Value.SelectLevel(index);
+                    Debug.Log($"Index has set: {index}");
                     SaveData();
                 }
             }

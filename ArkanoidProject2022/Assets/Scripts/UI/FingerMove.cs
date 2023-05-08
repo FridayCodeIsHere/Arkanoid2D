@@ -6,7 +6,7 @@ namespace ArkanoidProj
     public class FingerMove : MonoBehaviour
     {
         private SpriteRenderer _spriteRenderer;
-        private const float BorderPosition = 5.1f;
+        private const float BorderPosition = 5.4f;
         private float _halfWidthPlatform;
 
         private void Start()

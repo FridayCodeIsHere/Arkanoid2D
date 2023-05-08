@@ -47,7 +47,6 @@ namespace ArkanoidProj {
             LevelManager levelManager = new LevelManager();
 
             IsCompleted = levelManager.GetLevelData(_typeLevel).IsCompletedTypeLevel();
-            Debug.Log($"IsCompleted: {IsCompleted}");
         }
     }
 
