@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 namespace ArkanoidProj
 {
@@ -32,6 +33,7 @@ namespace ArkanoidProj
             if (_platformLife.Life > 0)
             {
                 _levelsData.SaveLevelData(_levelIndex.GetIndex(typeLevel), _progress);
+                ShopManagerScript.Instance.addCoins(_endGameData.Score);
             }
         }
 

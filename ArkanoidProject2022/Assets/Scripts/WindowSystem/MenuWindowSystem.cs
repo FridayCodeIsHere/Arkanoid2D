@@ -13,6 +13,7 @@ namespace ArkanoidProj
         [SerializeField] private Animator _developersWindow;
         [SerializeField] private GameObject _exitWindow;
         [SerializeField] private LevelsContent _content;
+        [SerializeField] private Animator _shopWindow;
 
 
         private void Start()
@@ -70,6 +71,11 @@ namespace ArkanoidProj
         public void HideDevelopersInfo()
         {
             _developersWindow.SetTrigger("Close");
+        }
+
+        public void HideShopWindow()
+        {
+            _shopWindow.SetTrigger("Close");
         }
     }
 }

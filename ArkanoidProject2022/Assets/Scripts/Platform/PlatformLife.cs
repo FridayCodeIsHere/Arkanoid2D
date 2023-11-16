@@ -9,8 +9,10 @@ namespace ArkanoidProj
         [SerializeField] private UnityEvent OnAllLifeLosted;
         [SerializeField] private UnityEvent OnLifeLosted;
         [SerializeField] private UnityEventInt UiUpdated;
+        private static readonly int _LifesUpgradeID = ShopManagerScript._LifesUpgradeID;
 
-        private const int MAX_LIFE = 3;
+        public static int DEFAULT_LIVES = 3;
+        private readonly int MAX_LIFE = DEFAULT_LIVES + ShopManagerScript.Instance.getQuantity(_LifesUpgradeID);
         private int _life;
 
         public int Life => _life;

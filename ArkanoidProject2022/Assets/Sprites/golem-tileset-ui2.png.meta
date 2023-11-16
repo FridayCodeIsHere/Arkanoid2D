@@ -3,7 +3,7 @@ guid: 36163d4bfa7a51847a957cdf2d43a63b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -24,6 +24,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -62,6 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -154,7 +156,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 106192d75691ccc44b59c4ec72dcf21d
-      internalID: -77812373
+      internalID: -8204291458373471189
       vertices: []
       indices: 
       edges: []
@@ -175,7 +177,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ef547e3e3e6e5014490392f2127a66d4
-      internalID: 576241136
+      internalID: -6493049923832261803
       vertices: []
       indices: 
       edges: []
@@ -196,7 +198,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ebf9608e2a3e89841a316d5ca2700419
-      internalID: 1308782907
+      internalID: -5928577598793341442
       vertices: []
       indices: 
       edges: []
@@ -217,7 +219,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ac916d2811ea9914e91f5b70d766cf22
-      internalID: 464767720
+      internalID: 2647163239253173074
       vertices: []
       indices: 
       edges: []
@@ -238,7 +240,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 43cc0704d8476d643bf60a1bbe86e74e
-      internalID: 1661721093
+      internalID: -631920644261987563
       vertices: []
       indices: 
       edges: []
@@ -253,6 +255,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      golem-tileset-ui2_1: -6493049923832261803
+      golem-tileset-ui2_3: 2647163239253173074
+      golem-tileset-ui2_9: -631920644261987563
+      golem-tileset-ui2_2: -5928577598793341442
+      golem-tileset-ui2_0: -8204291458373471189
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

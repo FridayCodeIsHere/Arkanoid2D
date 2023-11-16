@@ -112,6 +112,22 @@ Tylko wtedy odkryjesz starożytną tajemnicę i zdobędziesz „shem”, który 
 	        <pl>Rozwój:</pl>
 	    </Translates>
 	</Key>
+	<Key Name="Shop_Key">
+    <Translates>
+	        <en>Shop:</en>
+	        <cz>Obchod:</cz>
+	        <ua>Магазин:</ua>
+	        <pl>Sklep:</pl>
+	    </Translates>
+	</Key>
+	<Key Name="Length_Key">
+    <Translates>
+	        <en>Length:</en>
+	        <cz>Velikost:</cz>
+	        <ua>Розмір:</ua>
+	        <pl>Rozmiar:</pl>
+	    </Translates>
+	</Key>
   <Key Name="TapToPlay_Key">
     <Translates>
       <en>Double tap to play!</en>
